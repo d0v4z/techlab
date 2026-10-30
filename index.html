@@ -1,0 +1,1372 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TechLab Upgrades</title>
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/favicon.png">
+<meta name="theme-color" content="#141518">
+<meta property="og:title" content="TechLab · RAM & SSD upgrades in Lebanon">
+<meta property="og:description" content="Get your PS5 ready for GTA 6. SSD and RAM upgrades for PS5, PC and laptops, pickup anywhere in Lebanon, ready in 1–3 days.">
+<meta property="og:type" content="website">
+<meta name="description" content="RAM and SSD upgrades for PS5, PC and laptops in Lebanon, below shop prices. Get your PS5 ready for GTA 6 with pickup, install and return.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800;900&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<style>
+/* Layout: motion-led storefront over a live shader background (Tech Innovation blue/cyan on dark gray,
+   warming to sunset tones in the GTA 6 section). 3D-rendered products instead of photos, a real-time
+   sunset scene with a launch countdown, an HDD vs SSD load race, part finder, price list, giant CTA. */
+:root {
+  --bg: #1e1e1e;
+  --deep: #141518;
+  --glass: rgba(20, 21, 24, .66);
+  --glass-2: rgba(30, 32, 37, .72);
+  --line: rgba(255, 255, 255, .09);
+  --line-2: rgba(255, 255, 255, .18);
+  --text: #ffffff;
+  --muted: #b9bec7;
+  --subtle: #8f95a0;
+  --blue: #0066ff;
+  --blue-hi: #2f80ff;
+  --blue-soft: rgba(0, 102, 255, .2);
+  --cyan: #00ffff;
+  --link: #6aa3ff;
+  --warn: #ffc24b;
+  --pink: #ff3d8b;
+  --orange: #ff8a3d;
+
+  --f-display: 'Unbounded', 'Arial Black', system-ui, sans-serif;
+  --f-body: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --f-mono: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+
+  --content: 1240px;
+  --r: 20px;
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; background: var(--bg); }
+[hidden] { display: none !important; }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 400 16px/1.65 var(--f-body);
+  -webkit-font-smoothing: antialiased; overflow-x: clip;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+  z-index: 60; background: var(--deep);
+}
+#bg { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; display: block; pointer-events: none; }
+main, .top, .fab { position: relative; z-index: 1; }
+h1, h2, h3 { margin: 0; font-family: var(--f-display); font-weight: 800; text-wrap: balance; }
+p { margin: 0; }
+a { color: var(--link); }
+img { display: block; max-width: 100%; }
+:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 4px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+
+.wrap {
+  max-width: calc(var(--content) + 80px); margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+@media (min-width: 760px) {
+  .wrap { padding-left: max(40px, env(safe-area-inset-left, 0px)); padding-right: max(40px, env(safe-area-inset-right, 0px)); }
+}
+.kicker {
+  display: inline-flex; align-items: center; gap: 10px;
+  font: 500 12px/1.3 var(--f-mono); letter-spacing: .16em; text-transform: uppercase; color: var(--cyan);
+}
+.kicker::before { content: ""; width: 26px; height: 1px; background: currentColor; transform-origin: left; }
+.ph { font-family: var(--f-mono); font-size: .86em; color: var(--warn); border: 1px dashed var(--warn); border-radius: 4px; padding: 0 6px; white-space: nowrap; }
+.sw { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: .1em; margin-bottom: -.1em; }
+.si { display: inline-block; will-change: transform; }
+
+/* Buttons */
+.btn {
+  position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 54px; padding: 0 28px; border-radius: 999px; text-decoration: none; cursor: pointer;
+  font: 800 15px/1 var(--f-body); letter-spacing: .01em; white-space: nowrap; border: 1px solid transparent;
+  transition: background .3s var(--ease), color .3s, border-color .3s, box-shadow .3s; overflow: hidden; isolation: isolate;
+}
+.btn svg { width: 20px; height: 20px; flex: none; }
+.btn-blue { background: var(--blue); color: #fff; box-shadow: 0 14px 40px -14px rgba(0, 102, 255, .9); }
+.btn-blue::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, .35) 50%, transparent 70%); transform: translateX(-120%); animation: shine 3.6s var(--ease) infinite; }
+@keyframes shine { 0%, 55% { transform: translateX(-120%); } 100% { transform: translateX(120%); } }
+.btn-blue:hover { background: var(--blue-hi); color: #fff; box-shadow: 0 18px 50px -12px rgba(0, 102, 255, 1); }
+.btn-ghost { color: var(--text); border-color: var(--line-2); background: rgba(20, 21, 24, .4); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.btn-ghost:hover { color: var(--text); border-color: var(--text); }
+.btn .arr { transition: transform .4s var(--ease); }
+.btn:hover .arr { transform: translateX(4px); }
+
+/* Header */
+.top {
+  position: fixed; left: 0; right: 0; top: env(safe-area-inset-top, 0px); z-index: 50;
+  transition: background .4s, border-color .4s, transform .5s var(--ease);
+  border-bottom: 1px solid transparent;
+}
+.top.solid { background: rgba(17, 18, 20, .78); border-color: var(--line); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+.top.hide { transform: translateY(-110%); }
+.top .wrap { display: flex; align-items: center; gap: 28px; height: 72px; }
+.logo { line-height: 0; flex: none; }
+.logo img { height: 28px; width: auto; }
+.nav { display: flex; gap: 24px; margin-left: auto; list-style: none; padding: 0; margin-block: 0; }
+.nav a { color: var(--muted); text-decoration: none; font: 700 14px/1 var(--f-body); padding-block: 14px; position: relative; }
+.nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 8px; height: 1px; background: var(--cyan); transform: scaleX(0); transform-origin: right; transition: transform .4s var(--ease); }
+.nav a:hover { color: var(--text); }
+.nav a:hover::after { transform: scaleX(1); transform-origin: left; }
+.nav a.is-gta { color: var(--pink); }
+.top .btn { min-height: 44px; padding: 0 20px; font-size: 14px; }
+.menu-btn { display: none; position: relative; flex: none; width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--line-2); background: rgba(20, 21, 24, .6); cursor: pointer; padding: 0; }
+.menu-btn span { position: absolute; left: 14px; right: 14px; height: 1.5px; background: var(--text); transition: transform .4s var(--ease), top .4s var(--ease); }
+.menu-btn span:first-child { top: 19px; } .menu-btn span:last-child { top: 25px; }
+.menu-btn[aria-expanded="true"] span:first-child { top: 22px; transform: rotate(45deg); }
+.menu-btn[aria-expanded="true"] span:last-child { top: 22px; transform: rotate(-45deg); }
+.drawer { display: grid; max-height: calc(100svh - 70px); overflow-y: auto; background: rgba(17, 18, 20, .97); border-top: 1px solid var(--line);
+  padding: 6px max(16px, env(safe-area-inset-right, 0px)) 22px max(16px, env(safe-area-inset-left, 0px)); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+.drawer a { color: var(--text); text-decoration: none; font: 800 clamp(20px, 6vw, 26px)/1 var(--f-display); text-transform: uppercase; letter-spacing: -.01em; padding-block: 16px; border-bottom: 1px solid var(--line); animation: swap .5s var(--ease) both; }
+.drawer a.is-gta { color: var(--pink); }
+.drawer a:nth-child(2) { animation-delay: .04s; } .drawer a:nth-child(3) { animation-delay: .08s; } .drawer a:nth-child(4) { animation-delay: .12s; }
+.drawer a:nth-child(5) { animation-delay: .16s; } .drawer a:nth-child(6) { animation-delay: .2s; } .drawer a:nth-child(7) { animation-delay: .24s; }
+.drawer .drawer-wa { margin-top: 18px; border: 0; display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 54px; border-radius: 999px; background: var(--blue); font: 800 15px/1 var(--f-body); text-transform: none; padding: 0; }
+.drawer .drawer-wa svg { width: 20px; height: 20px; }
+.top.open { background: rgba(17, 18, 20, .97); border-color: var(--line); transform: none; }
+@media (min-width: 980px) { .drawer { display: none !important; } }
+@media (max-width: 979px) { .nav { display: none; } .top .btn { margin-left: auto; } .menu-btn { display: block; } .top .wrap { gap: 10px; } }
+@media (max-width: 459px) { .top .btn { display: none; } .menu-btn { margin-left: auto; } .logo img { height: 24px; } .top .wrap { height: 62px; } }
+
+/* Hero */
+.hero { position: relative; min-height: min(100svh, 960px); display: flex; align-items: center; padding-block: 120px 80px; overflow: hidden; isolation: isolate; }
+#ssd { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; display: block; }
+.hero .wrap { position: relative; z-index: 2; width: 100%; pointer-events: none; }
+.hero .wrap > * { pointer-events: auto; }
+.hero-copy { display: grid; gap: 30px; max-width: 900px; }
+.hero h1 { font-size: clamp(30px, 5.8vw, 100px); line-height: .95; letter-spacing: -.035em; text-transform: uppercase; font-weight: 900; }
+.hero h1 .ln { display: block; overflow: hidden; padding-bottom: .06em; }
+.hero h1 .ln > span { display: inline-block; will-change: transform; }
+.hero h1 .blue { color: var(--blue); }
+.hero .lead { font-size: clamp(16px, 1.5vw, 19px); color: var(--muted); max-width: 30em; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 10px 26px; font: 500 12.5px/1.4 var(--f-mono); color: var(--subtle); letter-spacing: .06em; text-transform: uppercase; }
+.hero-meta span { display: inline-flex; gap: 8px; align-items: center; }
+.hero-meta span::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 10px var(--cyan); animation: pulse 2s ease-in-out infinite; }
+.hero-meta span:nth-child(2)::before { animation-delay: .4s; } .hero-meta span:nth-child(3)::before { animation-delay: .8s; }
+@keyframes pulse { 50% { opacity: .3; transform: scale(.7); } }
+.gta-pill { display: inline-flex; align-items: center; gap: 10px; width: fit-content; text-decoration: none; color: var(--text); font: 700 13.5px/1 var(--f-body); padding: 8px 14px 8px 8px; border-radius: 999px; background: rgba(255, 61, 139, .12); border: 1px solid rgba(255, 61, 139, .45); }
+.gta-pill b { font: 700 11.5px/1 var(--f-mono); letter-spacing: .08em; background: linear-gradient(90deg, var(--pink), var(--orange)); color: #1a0510; padding: 6px 9px; border-radius: 999px; }
+.gta-pill:hover { color: var(--text); border-color: var(--pink); }
+.scroll-cue { position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%); z-index: 2; font: 500 11px/1 var(--f-mono); letter-spacing: .2em; color: var(--subtle); text-transform: uppercase; display: grid; justify-items: center; gap: 10px; }
+.scroll-cue i { width: 1px; height: 40px; background: linear-gradient(var(--cyan), transparent); animation: drip 2s var(--ease) infinite; transform-origin: top; }
+@media (max-height: 780px) { .scroll-cue { display: none; } }
+@keyframes drip { 0% { transform: scaleY(0); } 60% { transform: scaleY(1); } 100% { transform: scaleY(1); opacity: 0; } }
+@media (max-width: 899px) {
+  .hero { min-height: 0; flex-direction: column; align-items: stretch; padding-block: 100px 24px; }
+  .hero h1 { font-size: clamp(30px, 9vw, 64px); }
+  #ssd { position: relative; inset: auto; height: 300px; order: 2; margin-top: 8px; }
+  .scroll-cue { display: none; }
+  .hero-cta .btn { flex: 1 1 auto; }
+}
+
+/* Marquee */
+.marquee { overflow: hidden; border-block: 1px solid var(--line); background: rgba(20, 21, 24, .55); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); padding-block: 22px; }
+.marquee-track { display: flex; width: max-content; will-change: transform; }
+.marquee-track span {
+  font: 900 clamp(44px, 9vw, 140px)/1 var(--f-display); text-transform: uppercase; letter-spacing: -.02em;
+  padding-right: .45em; white-space: nowrap; color: transparent; -webkit-text-stroke: 1.5px rgba(255, 255, 255, .34);
+}
+.marquee-track span.fill { color: var(--blue); -webkit-text-stroke: 0; }
+.marquee-track span.star { color: var(--cyan); -webkit-text-stroke: 0; font-size: clamp(26px, 5vw, 80px); align-self: center; display: inline-block; animation: spin 6s linear infinite; padding-right: 0; margin-right: .45em; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Sections */
+.sec { padding-block: clamp(80px, 12vw, 160px); position: relative; }
+.head { display: grid; gap: 18px; max-width: 780px; margin-bottom: clamp(40px, 6vw, 72px); }
+.head h2 { font-size: clamp(30px, 5.2vw, 72px); line-height: 1; letter-spacing: -.03em; text-transform: uppercase; }
+.head h2 em { font-style: normal; color: var(--blue); }
+.head p { color: var(--muted); font-size: 18px; max-width: 34em; }
+
+/* Parts rail */
+.rail-sec { overflow: hidden; position: relative; }
+.rail-pin { padding-block: clamp(80px, 10vw, 120px); }
+@media (min-width: 900px) { .rail-pin { padding-block: clamp(56px, 9vh, 110px); min-height: 100svh; display: flex; flex-direction: column; justify-content: center; } .rail .part { width: clamp(320px, calc((100svh - 400px) * 1.6), 500px); } .rail-intro { width: clamp(300px, 30vw, 400px); } }
+.rail { display: flex; gap: 22px; width: max-content; perspective: 1400px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+@media (min-width: 760px) { .rail { padding-left: max(40px, calc((100vw - var(--content)) / 2)); padding-right: 40px; } }
+.part {
+  width: min(82vw, 500px); flex: none; background: var(--glass); border: 1px solid var(--line); border-radius: var(--r);
+  overflow: hidden; display: flex; flex-direction: column; transition: border-color .4s, transform .6s var(--ease);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+}
+.part:hover { border-color: rgba(0, 102, 255, .7); }
+.shot { aspect-ratio: 16 / 10; position: relative; overflow: hidden; background: radial-gradient(60% 70% at 50% 60%, rgba(0, 102, 255, .28), transparent 70%), #0d0e11; max-width: 100%; }
+.shot::after { content: ""; position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 32px 32px; opacity: .5; -webkit-mask-image: radial-gradient(70% 70% at 50% 60%, #000, transparent); mask-image: radial-gradient(70% 70% at 50% 60%, #000, transparent); }
+.shot canvas, .shot img { position: absolute; inset: 0; width: 100%; height: 100%; display: block; z-index: 1; }
+.shot img { object-fit: contain; }
+.gl .shot img.fb { display: none; }
+html:not(.gl) .shot canvas { display: none; }
+.shot .idx { position: absolute; top: 16px; left: 18px; z-index: 2; font: 500 11.5px/1 var(--f-mono); letter-spacing: .14em; color: var(--cyan); }
+.part .body { padding: 24px 26px 26px; display: grid; gap: 10px; }
+.part h3 { font-size: clamp(22px, 2.4vw, 30px); line-height: 1.05; text-transform: uppercase; letter-spacing: -.02em; }
+.part .spec { font: 500 13px/1.5 var(--f-mono); color: var(--cyan); }
+.part p { color: var(--muted); font-size: 15px; }
+.part .go { margin-top: 4px; display: inline-flex; gap: 8px; align-items: center; color: var(--text); text-decoration: none; font-weight: 800; font-size: 15px; width: fit-content; padding-block: 12px; }
+.part .go span { color: var(--blue); transition: transform .4s var(--ease); }
+.part .go:hover span { transform: translateX(5px); }
+.rail-intro { width: min(82vw, 400px); flex: none; display: grid; align-content: end; gap: 18px; padding-bottom: 8px; }
+.rail-intro h2 { font-size: clamp(32px, 4.6vw, 64px); line-height: .98; text-transform: uppercase; letter-spacing: -.03em; }
+.rail-intro p { color: var(--muted); }
+.swipe-hint { display: none; font: 500 12px/1 var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--subtle); margin-top: 18px; }
+.rail-progress { height: 2px; background: var(--line); margin-top: clamp(20px, 3.5vh, 40px); position: relative; }
+.rail-progress i { position: absolute; inset: 0; background: linear-gradient(90deg, var(--blue), var(--cyan)); transform-origin: left; transform: scaleX(0); }
+.no-pin .rail { overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: max(16px, env(safe-area-inset-left, 0px)); padding-bottom: 14px; width: auto; scrollbar-width: none; }
+.no-pin .rail::-webkit-scrollbar { display: none; }
+.no-pin .part, .no-pin .rail-intro { scroll-snap-align: start; }
+.no-pin .rail-progress { display: none; }
+.no-pin .swipe-hint { display: block; }
+
+/* GTA 6 */
+.gta { position: relative; overflow: hidden; isolation: isolate; padding-bottom: clamp(44px, 5vw, 76px); }
+.gta .wrap { width: 100%; position: relative; z-index: 1; }
+/* the key art sits full-width at its own 16:9 shape, the copy rides up over its lower half */
+.gta-bg { position: relative; z-index: -1; width: 100%; aspect-ratio: 16 / 9; max-height: 94svh; overflow: hidden; background: #2a0f2e;
+  margin-bottom: calc(-1 * clamp(64px, 25vw, 520px)); }
+.gta-move { position: absolute; inset: 0; transform: scale(1.06); will-change: transform; }
+.gta-move img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; transform-origin: 55% 35%; animation: kb 18s ease-in-out infinite alternate; }
+@keyframes kb { from { transform: scale(1); } to { transform: scale(1.08) translate(-1%, -1%); } }
+.gta-bg::before { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(to top, var(--bg) 0%, rgba(30, 30, 30, .86) 20%, rgba(30, 30, 30, .4) 42%, rgba(30, 30, 30, 0) 60%),
+              linear-gradient(to right, rgba(22, 8, 30, .55) 0%, rgba(22, 8, 30, 0) 52%),
+              linear-gradient(to bottom, var(--bg) 0%, rgba(30, 30, 30, 0) 12%),
+              repeating-linear-gradient(0deg, rgba(0, 0, 0, .1) 0 1px, transparent 1px 4px); }
+.gta-bg::after { content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none; background: linear-gradient(115deg, transparent 38%, rgba(255, 220, 240, .16) 50%, transparent 62%); transform: translateX(-120%); animation: sweep 7s var(--ease) infinite; }
+@keyframes sweep { 0%, 65% { transform: translateX(-120%); } 100% { transform: translateX(120%); } }
+@media (max-width: 899px) {
+  .gta-bg { margin-bottom: -18vw; }
+  .gta-bg::before { background: linear-gradient(to top, var(--bg) 0%, rgba(30, 30, 30, .6) 22%, rgba(30, 30, 30, 0) 50%), linear-gradient(to bottom, var(--bg) 0%, rgba(30, 30, 30, 0) 14%); }
+}
+.gta-copy { display: grid; gap: 20px; max-width: 720px; text-shadow: 0 2px 18px rgba(10, 2, 20, .75); }
+.gta .kicker { color: var(--orange); }
+.gta h2 { font: 900 clamp(38px, 6vw, 92px)/.92 var(--f-display); text-transform: uppercase; letter-spacing: -.035em; }
+.gta h2 .grad { background: linear-gradient(95deg, #ffe14d, var(--orange) 35%, var(--pink) 75%); -webkit-background-clip: text; background-clip: text; color: transparent; display: inline-block; filter: drop-shadow(0 0 30px rgba(255, 61, 139, .45)); }
+.gta h2 .grad, .gta h2 .grad .si { text-shadow: none; }
+.gta h2 .grad .si { background: linear-gradient(95deg, #ffe14d, var(--orange) 35%, var(--pink) 75%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.gta p.lead { color: #f1dceb; font-size: 18px; max-width: 32em; }
+.count { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; max-width: 560px; }
+.count div { background: rgba(18, 5, 31, .55); border: 1px solid rgba(255, 61, 139, .4); border-radius: 16px; padding: 14px 10px 12px; text-align: center; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); min-width: 0; }
+.count b { display: block; font: 800 clamp(26px, 4.4vw, 54px)/1 var(--f-mono); font-variant-numeric: tabular-nums; color: #fff; text-shadow: 0 0 22px rgba(255, 61, 139, .8); }
+.count b.tick { animation: tick .45s var(--ease); }
+@keyframes tick { from { transform: translateY(-30%); opacity: .2; } to { transform: none; opacity: 1; } }
+.count span { display: block; margin-top: 8px; font: 500 11px/1 var(--f-mono); letter-spacing: .16em; text-transform: uppercase; color: #f0b9d4; }
+.gta-cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.btn-sunset { background: linear-gradient(95deg, var(--orange), var(--pink)); color: #1a0510; box-shadow: 0 14px 40px -12px rgba(255, 61, 139, .9); }
+.btn-sunset:hover { color: #1a0510; box-shadow: 0 18px 50px -10px rgba(255, 61, 139, 1); }
+.gta-fine { font-size: 12px; color: #ecd6e6; max-width: 46em; }
+@media (max-width: 599px) { .count { gap: 6px; } .count div { padding: 12px 4px 10px; border-radius: 12px; } .count span { font-size: 9.5px; letter-spacing: .1em; } }
+
+/* Statement + steps */
+.statement { font: 800 clamp(26px, 4.6vw, 64px)/1.14 var(--f-display); letter-spacing: -.025em; max-width: 1100px; }
+.statement .w { opacity: .16; transition: opacity .25s, color .25s; }
+.statement .w.hl { color: var(--blue); }
+.static .statement .w { opacity: 1; }
+.steps { list-style: none; padding: 0; margin: clamp(56px, 8vw, 96px) 0 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.steps li { border-top: 1px solid var(--line-2); padding-top: 22px; display: grid; gap: 10px; align-content: start; position: relative; }
+.steps li::before { content: ""; position: absolute; top: -1px; left: 0; height: 2px; width: 0; background: linear-gradient(90deg, var(--blue), var(--cyan)); transition: width 1.2s var(--ease); }
+.steps li.on::before { width: 100%; }
+.steps .n { font: 900 46px/1 var(--f-display); color: transparent; -webkit-text-stroke: 1px var(--line-2); transition: -webkit-text-stroke-color .6s; }
+.steps li.on .n { -webkit-text-stroke-color: var(--blue); }
+.steps h3 { font-size: 19px; text-transform: uppercase; letter-spacing: -.01em; }
+.steps p { color: var(--muted); font-size: 15px; }
+@media (max-width: 899px) { .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 36px; } }
+@media (max-width: 519px) { .steps { grid-template-columns: minmax(0, 1fr); } }
+
+/* Load race */
+.ba { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 96px); align-items: center; }
+.ba-copy { display: grid; gap: 22px; }
+.ba-copy h2 { font-size: clamp(30px, 4.6vw, 64px); line-height: 1; letter-spacing: -.03em; text-transform: uppercase; }
+.ba-copy h2 em { font-style: normal; color: var(--blue); }
+.ba-copy p { color: var(--muted); font-size: 18px; }
+.race { background: var(--glass); border: 1px solid var(--line); border-radius: var(--r); padding: clamp(20px, 3vw, 34px); display: grid; gap: 26px; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); min-width: 0; }
+.race-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.race-head .kicker { color: var(--subtle); }
+.lane { display: grid; gap: 10px; }
+.lane-top { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+.lane-top b { font: 800 16px/1.2 var(--f-display); text-transform: uppercase; }
+.lane-top .st { font: 500 12.5px/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--subtle); }
+.lane-top .st.ok { color: var(--cyan); }
+.track { height: 16px; border-radius: 999px; background: rgba(255, 255, 255, .06); overflow: hidden; border: 1px solid var(--line); }
+.fill { display: block; height: 100%; width: 100%; transform-origin: left; transform: scaleX(1); border-radius: 999px; }
+.fill.hdd { background: repeating-linear-gradient(45deg, #5a5f69 0 10px, #4a4e57 10px 20px); }
+.fill.ssd { background: linear-gradient(90deg, var(--blue), var(--cyan)); box-shadow: 0 0 18px rgba(0, 255, 255, .6); }
+.race .btn { justify-self: start; min-height: 46px; padding: 0 20px; font-size: 14px; }
+.ba-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.ba-stats div { background: rgba(20, 21, 24, .8); padding: 16px 18px; display: grid; gap: 4px; }
+.ba-stats b { font: 800 14px/1.2 var(--f-display); text-transform: uppercase; }
+.ba-stats span { color: var(--muted); font-size: 14px; }
+@media (max-width: 899px) { .ba { grid-template-columns: minmax(0, 1fr); } }
+
+/* Finder */
+.sec.tight { padding-block: clamp(64px, 8vw, 110px); }
+.head.sm { margin-bottom: clamp(26px, 3.6vw, 40px); gap: 12px; }
+.head.sm h2 { font-size: clamp(26px, 3.4vw, 46px); }
+.head.sm p { font-size: 16px; }
+.finder { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+@media (max-width: 899px) { .finder { grid-template-columns: minmax(0, 1fr); } }
+.fpanel { background: var(--glass); border: 1px solid var(--line); border-radius: var(--r); padding: clamp(18px, 2.4vw, 26px); display: grid; gap: 20px; min-width: 0; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+legend { padding: 0; margin-bottom: 10px; font: 500 12px/1.3 var(--f-mono); letter-spacing: .16em; text-transform: uppercase; color: var(--subtle); }
+legend b { color: var(--cyan); font-weight: 500; margin-right: 8px; }
+.opts { display: flex; flex-wrap: wrap; gap: 10px; }
+.opt { position: relative; }
+.opt input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
+.opt span {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 999px;
+  border: 1px solid var(--line-2); color: var(--muted); font: 800 14px/1 var(--f-body); cursor: pointer;
+  transition: background .3s var(--ease), color .3s, border-color .3s, transform .3s var(--ease);
+}
+.opt:hover span { color: var(--text); border-color: var(--text); }
+.opt input:checked + span { background: var(--text); color: #0b0c0e; border-color: var(--text); transform: scale(1.04); }
+.opt input:focus-visible + span { outline: 2px solid var(--cyan); outline-offset: 3px; }
+.result { background: linear-gradient(160deg, rgba(0, 102, 255, .28), rgba(0, 102, 255, .05) 60%), var(--glass); border: 1px solid rgba(0, 102, 255, .5); border-radius: var(--r); padding: clamp(18px, 2.4vw, 26px); display: grid; gap: 14px; align-content: start; min-width: 0; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.result-top { display: grid; grid-template-columns: minmax(0, 170px) minmax(0, 1fr); gap: 16px; align-items: center; }
+.result .shot { border-radius: 12px; border: 1px solid var(--line); }
+@media (max-width: 459px) { .result-top { grid-template-columns: minmax(0, 116px) minmax(0, 1fr); gap: 12px; } }
+.result h3 { font-size: clamp(18px, 1.9vw, 24px); line-height: 1.05; text-transform: uppercase; letter-spacing: -.02em; }
+.status { font: 500 12px/1.3 var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--cyan); margin-top: 8px; display: block; }
+.status[data-tone="check"] { color: var(--warn); }
+.rspec { margin: 0; display: grid; }
+.rspec div { display: grid; grid-template-columns: minmax(0, 8.5em) minmax(0, 1fr); gap: 16px; padding-block: 7px; border-top: 1px solid var(--line); font-size: 14px; }
+.rspec dt { font: 500 12px/1.6 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--subtle); }
+.rspec dd { margin: 0; font-family: var(--f-mono); font-size: 14px; min-width: 0; overflow-wrap: anywhere; }
+.result .note { color: var(--muted); font-size: 14px; }
+.result .btn { width: 100%; min-height: 48px; }
+.swap { animation: swap .5s var(--ease); }
+@keyframes swap { from { opacity: .3; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@media (max-width: 459px) { .rspec div { grid-template-columns: minmax(0, 1fr); gap: 2px; } }
+
+/* Prices */
+.plist { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--line-2); position: relative; isolation: isolate; }
+.prow {
+  display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) auto; gap: 24px; align-items: center;
+  padding: 28px 12px; border-bottom: 1px solid var(--line-2); position: relative; margin-inline: -12px;
+}
+.prow::before { content: ""; position: absolute; inset: 0; background: var(--blue-soft); transform: scaleY(0); transform-origin: bottom; transition: transform .5s var(--ease); z-index: -1; border-radius: 6px; }
+.prow:hover::before { transform: scaleY(1); }
+.prow h3 { font-size: clamp(22px, 3.2vw, 44px); line-height: 1; text-transform: uppercase; letter-spacing: -.02em; transition: transform .5s var(--ease); }
+.prow:hover h3 { transform: translateX(12px); }
+.prow .sizes { display: flex; flex-wrap: wrap; gap: 8px; font: 500 13px/1 var(--f-mono); color: var(--muted); }
+.prow .sizes span { display: inline-flex; align-items: center; min-height: 32px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--line-2); background: rgba(20, 21, 24, .45); }
+.prow .btn { min-height: 46px; padding: 0 20px; font-size: 14px; }
+.peek { position: absolute; left: 0; top: 0; width: 320px; aspect-ratio: 16 / 10; border-radius: 16px; overflow: hidden; pointer-events: none; z-index: 5; opacity: 0; transform: translate(-50%, -50%) scale(.6) rotate(-6deg); transition: opacity .3s, transform .5s var(--ease); box-shadow: 0 30px 80px -20px rgba(0, 102, 255, .8); border: 1px solid rgba(0, 102, 255, .5); }
+.peek.on { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(-3deg); }
+.peek .shot { width: 100%; height: 100%; aspect-ratio: auto; }
+@media (hover: none), (max-width: 899px) { .peek { display: none; } }
+@media (max-width: 899px) { .prow { grid-template-columns: minmax(0, 1fr); gap: 14px; margin-inline: 0; padding-inline: 0; } .prow .btn { justify-self: start; } }
+.price-note { margin-top: 26px; color: var(--muted); font-size: 15px; max-width: 40em; }
+
+/* FAQ */
+.faq-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(32px, 6vw, 96px); align-items: start; }
+@media (max-width: 899px) { .faq-grid { grid-template-columns: minmax(0, 1fr); } }
+.faq details { border-bottom: 1px solid var(--line-2); }
+.faq details:first-child { border-top: 1px solid var(--line-2); }
+.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-block: 22px; font: 800 18px/1.35 var(--f-body); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary i { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line-2); flex: none; position: relative; transition: transform .4s var(--ease), background .3s, border-color .3s; }
+.faq summary i::before, .faq summary i::after { content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 1.5px; background: var(--text); transform: translate(-50%, -50%); }
+.faq summary i::after { transform: translate(-50%, -50%) rotate(90deg); }
+.faq details[open] summary i { transform: rotate(135deg); background: var(--blue); border-color: var(--blue); }
+.faq summary:hover { color: var(--link); }
+.faq .ans { padding-bottom: 22px; color: var(--muted); max-width: 40em; }
+.faq details[open] .ans { animation: swap .5s var(--ease); }
+.ig { margin-top: 32px; position: relative; display: grid; gap: 14px; padding: 26px; border-radius: var(--r); text-decoration: none; color: var(--text); max-width: 420px; overflow: hidden; isolation: isolate; background: var(--glass); }
+.ig::before { content: ""; position: absolute; inset: -60%; z-index: -2; background: conic-gradient(from 0deg, var(--blue), var(--cyan), var(--pink), var(--orange), var(--blue)); animation: spin 6s linear infinite; }
+.ig::after { content: ""; position: absolute; inset: 1.5px; z-index: -1; border-radius: calc(var(--r) - 1.5px); background: #16171a; }
+.ig svg { width: 34px; height: 34px; color: var(--text); }
+.ig b { font: 800 clamp(22px, 2.6vw, 30px)/1 var(--f-display); }
+.ig span { color: var(--muted); font-size: 15px; }
+.ig em { font-style: normal; font-weight: 800; color: var(--cyan); }
+
+/* CTA */
+.cta { position: relative; overflow: hidden; border-top: 1px solid var(--line); padding-block: clamp(90px, 13vw, 180px) 40px; isolation: isolate; background: linear-gradient(transparent, rgba(10, 11, 13, .7)); }
+.cta::before { content: ""; position: absolute; inset: auto -10% -40% -10%; height: 90%; background: radial-gradient(50% 60% at 50% 100%, rgba(0, 102, 255, .5), transparent 70%); z-index: -1; animation: breathe 6s ease-in-out infinite; }
+@keyframes breathe { 50% { opacity: .55; transform: scale(1.08); } }
+.cta h2 { font: 900 clamp(46px, 12vw, 220px)/.88 var(--f-display); text-transform: uppercase; letter-spacing: -.045em; }
+.cta h2 .ln { display: block; overflow: hidden; }
+.cta h2 .ln > span { display: inline-block; }
+.cta h2 .blue { color: var(--blue); }
+.cta-row { margin-top: clamp(36px, 5vw, 64px); display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 28px; align-items: end; }
+.cta-row p { color: var(--muted); font-size: 18px; max-width: 30em; }
+.cta-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+@media (max-width: 899px) { .cta-row { grid-template-columns: minmax(0, 1fr); } .cta-actions .btn { flex: 1 1 auto; } }
+.contact-lines { margin-top: 44px; display: flex; flex-wrap: wrap; gap: 12px; }
+.cline { display: inline-flex; align-items: center; gap: 14px; padding: 6px 6px 6px 18px; border: 1px solid var(--line-2); border-radius: 999px; max-width: 100%; background: rgba(20, 21, 24, .5); }
+.cline .k { font: 500 11.5px/1 var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--subtle); }
+.cline .v { font: 500 16px/1 var(--f-mono); user-select: all; }
+.copy-btn { min-height: 44px; padding: 0 16px; border-radius: 999px; border: 0; background: #2a2c31; color: var(--text); font: 700 13px/1 var(--f-body); cursor: pointer; }
+.copy-btn:hover { background: var(--text); color: #0b0c0e; }
+.copy-btn[data-done] { background: var(--cyan); color: #00242a; }
+.foot { margin-top: 64px; padding-top: 26px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 18px 32px; align-items: center; justify-content: space-between; color: var(--subtle); font-size: 13px; }
+.foot .logo img { height: 26px; }
+.foot nav { display: flex; flex-wrap: wrap; gap: 4px 22px; }
+.foot nav a { color: var(--muted); text-decoration: none; padding-block: 10px; }
+.foot nav a:hover { color: var(--text); }
+.fine { flex-basis: 100%; font-size: 12.5px; }
+
+/* Cursor ring (mouse only) */
+.ring { position: fixed; left: 0; top: 0; width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid var(--cyan); pointer-events: none; z-index: 70; transform: translate(-50%, -50%); transition: width .3s var(--ease), height .3s var(--ease), background .3s, border-color .3s, opacity .3s; opacity: 0; mix-blend-mode: screen; }
+.ring.on { opacity: .9; }
+.ring.big { width: 64px; height: 64px; background: rgba(0, 102, 255, .18); border-color: var(--blue); }
+
+/* Floating WhatsApp */
+.fab {
+  position: fixed; z-index: 40; width: 58px; height: 58px; border-radius: 50%;
+  right: calc(16px + env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  display: none; align-items: center; justify-content: center; background: var(--blue); color: #fff;
+  box-shadow: 0 14px 40px -10px rgba(0, 102, 255, .9); transition: transform .4s var(--ease);
+}
+.fab::after { content: ""; position: absolute; inset: -6px; border-radius: 50%; border: 2px solid var(--blue); animation: ping 2.4s var(--ease) infinite; }
+@keyframes ping { 0% { transform: scale(.85); opacity: .9; } 100% { transform: scale(1.35); opacity: 0; } }
+.fab svg { width: 26px; height: 26px; }
+.fab.away { transform: scale(0); }
+@media (max-width: 979px) { .fab { display: inline-flex; } }
+</style>
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.6-4.8A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.2-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".9" fill="currentColor"/></symbol>
+</svg>
+
+<header class="top" id="top-bar">
+  <div class="wrap">
+    <a class="logo" href="#home" aria-label="TechLab home"><img src="img/logo.png" alt="TechLab — RAM &amp; Storage Upgrades" width="720" height="136"></a>
+    <ul class="nav">
+      <li><a href="#parts">Parts</a></li>
+      <li><a class="is-gta" href="#gta6">GTA 6</a></li>
+      <li><a href="#ps5">PS5 upgrade</a></li>
+      <li><a href="#finder">Find your part</a></li>
+      <li><a href="#prices">Prices</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="btn btn-blue magnet" href="https://wa.me/96171127767" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+    <button class="menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span></button>
+  </div>
+  <nav class="drawer" id="drawer" aria-label="Menu" hidden>
+    <a href="#parts">Parts</a>
+    <a class="is-gta" href="#gta6">GTA 6</a>
+    <a href="#ps5">PS5 upgrade</a>
+    <a href="#finder">Find your part</a>
+    <a href="#prices">Prices</a>
+    <a href="#faq">FAQ</a>
+    <a class="drawer-wa" href="https://wa.me/96171127767" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Order on WhatsApp</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <canvas id="ssd" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <div class="hero-copy">
+        <a class="gta-pill a-hero" href="#gta6"><b id="pill-days">GTA 6</b>Get your PS5 ready for launch <span aria-hidden="true">→</span></a>
+        <h1><span class="ln"><span>More space.</span></span><span class="ln"><span class="blue">More games.</span></span></h1>
+        <p class="lead a-hero">SSD and RAM upgrades for PS5, PC and laptops, for less than the shops. For PS5 we pick it up, install the drive and bring it back.</p>
+        <div class="hero-cta a-hero">
+          <a class="btn btn-blue magnet" href="https://wa.me/96171127767" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Order on WhatsApp</a>
+          <a class="btn btn-ghost magnet" href="#finder">Find your part <span class="arr" aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-meta a-hero"><span>Pickup anywhere in Lebanon</span><span>Ready in 1–3 days</span><span>Pay with Whish or cash</span></div>
+      </div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true">Scroll<i></i></div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="mq">
+      <span>NVMe</span><span class="star">✦</span><span class="fill">DDR5</span><span class="star">✦</span><span>PS5 SSD</span><span class="star">✦</span><span class="fill">PCIe 4.0</span><span class="star">✦</span><span>DDR4</span><span class="star">✦</span><span class="fill">2TB</span><span class="star">✦</span>
+      <span>NVMe</span><span class="star">✦</span><span class="fill">DDR5</span><span class="star">✦</span><span>PS5 SSD</span><span class="star">✦</span><span class="fill">PCIe 4.0</span><span class="star">✦</span><span>DDR4</span><span class="star">✦</span><span class="fill">2TB</span><span class="star">✦</span>
+    </div>
+  </div>
+
+  <section class="rail-sec" id="parts">
+    <div class="rail-pin" id="rail-pin">
+      <div class="rail" id="rail">
+        <div class="rail-intro">
+          <span class="kicker">Parts in stock</span>
+          <h2 class="split">The parts that make it fast.</h2>
+          <p class="a-up">Genuine drives and memory from known brands. Tell us your model and we match the right one.</p>
+          <span class="swipe-hint">Swipe →</span>
+        </div>
+        <article class="part">
+          <div class="shot"><span class="idx">PS5 · PC · LAPTOP</span><canvas class="pv" data-model="nvme" aria-hidden="true"></canvas><img class="fb" src="img/p-nvme.jpg" alt="" loading="lazy"></div>
+          <div class="body">
+            <span class="spec">M.2 2280 · PCIe Gen4 · 1–4 TB</span>
+            <h3>NVMe SSD</h3>
+            <p>The fastest drive you can put in a PS5, a modern PC or a laptop. Heatsink fitted for PS5.</p>
+            <a class="go" href="https://wa.me/96171127767?text=Hi%20TechLab!%20Can%20I%20get%20a%20price%20on%20an%20NVMe%20SSD%3F" target="_blank" rel="noopener">Ask for a price <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="part">
+          <div class="shot"><span class="idx">PC · LAPTOP</span><canvas class="pv" data-model="ram" aria-hidden="true"></canvas><img class="fb" src="img/p-ram.jpg" alt="" loading="lazy"></div>
+          <div class="body">
+            <span class="spec">DDR4 · DDR5 · DIMM &amp; SO-DIMM</span>
+            <h3>RAM</h3>
+            <p>More memory for games, browser tabs and editing. Matched to your motherboard or laptop.</p>
+            <a class="go" href="https://wa.me/96171127767?text=Hi%20TechLab!%20Can%20I%20get%20a%20price%20on%20RAM%3F%20My%20model%20is%3A%20" target="_blank" rel="noopener">Ask for a price <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="part">
+          <div class="shot"><span class="idx">PC · LAPTOP</span><canvas class="pv" data-model="sata" aria-hidden="true"></canvas><img class="fb" src="img/p-sata.jpg" alt="" loading="lazy"></div>
+          <div class="body">
+            <span class="spec">2.5" SATA · 512 GB – 2 TB</span>
+            <h3>SATA SSD</h3>
+            <p>Swap out an old hard drive and your laptop boots in seconds instead of minutes.</p>
+            <a class="go" href="https://wa.me/96171127767?text=Hi%20TechLab!%20Can%20I%20get%20a%20price%20on%20a%20SATA%20SSD%3F" target="_blank" rel="noopener">Ask for a price <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="part">
+          <div class="shot"><span class="idx">PS5 · PC · LAPTOP</span><canvas class="pv" data-model="ext" aria-hidden="true"></canvas><img class="fb" src="img/p-external.jpg" alt="" loading="lazy"></div>
+          <div class="body">
+            <span class="spec">USB 3.2 · USB-C · SSD &amp; HDD</span>
+            <h3>External drives</h3>
+            <p>Backups, files and extra game storage you can carry anywhere.</p>
+            <a class="go" href="https://wa.me/96171127767?text=Hi%20TechLab!%20Can%20I%20get%20a%20price%20on%20an%20external%20drive%3F" target="_blank" rel="noopener">Ask for a price <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      </div>
+      <div class="wrap"><div class="rail-progress" aria-hidden="true"><i id="rail-bar"></i></div></div>
+    </div>
+  </section>
+
+  <section class="gta" id="gta6">
+    <div class="gta-bg" id="gta-bg" aria-hidden="true"><div class="gta-move" id="gta-move"><img src="img/gta6.jpg" alt="" width="1200" height="675"></div></div>
+    <div class="wrap">
+      <div class="gta-copy">
+        <span class="kicker">GTA 6 · 19 November 2026</span>
+        <h2 class="split">Ready for <span class="grad">GTA&nbsp;6?</span></h2>
+        <p class="lead a-up">Launch day is close. Make room on your PS5 now: we pick it up, fit an SSD and bring it back before you need it.</p>
+        <div class="count a-up" id="count" role="timer" aria-label="Countdown to GTA 6 launch, 19 November 2026, Beirut time">
+          <div><b id="cd-d">--</b><span>Days</span></div>
+          <div><b id="cd-h">--</b><span>Hours</span></div>
+          <div><b id="cd-m">--</b><span>Min</span></div>
+          <div><b id="cd-s">--</b><span>Sec</span></div>
+        </div>
+        <div class="gta-cta a-up">
+          <a class="btn btn-sunset magnet" href="https://wa.me/96171127767?text=Hi%20TechLab!%20I%20want%20my%20PS5%20ready%20for%20GTA%206.%20Can%20I%20get%20an%20SSD%20with%20pickup%20and%20installation%3F" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Get my PS5 ready</a>
+          <a class="btn btn-ghost magnet" href="#ps5">How it works <span class="arr" aria-hidden="true">→</span></a>
+        </div>
+        <p class="gta-fine a-up">Countdown to midnight 19 November, Beirut time. Unlock times can vary by region. Grand Theft Auto VI and its artwork are © Rockstar Games / Take-Two Interactive; TechLab is not affiliated with them.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="ps5">
+    <div class="wrap">
+      <span class="kicker a-up" style="margin-bottom:28px">PS5 storage upgrade</span>
+      <p class="statement" id="statement">Storage full before GTA 6? We pick up your PS5, fit a Gen4 SSD with a heatsink, and bring it back ready to play.</p>
+      <ol class="steps" id="steps">
+        <li><span class="n">01</span><h3>Message us</h3><p>Send your PS5 model and the size you want. We confirm the drive and the price.</p></li>
+        <li><span class="n">02</span><h3>We pick it up</h3><p>We collect your PS5 from your door, anywhere in Lebanon.</p></li>
+        <li><span class="n">03</span><h3>We install it</h3><p>Drive and heatsink fitted, formatted, and checked at full capacity.</p></li>
+        <li><span class="n">04</span><h3>We bring it back</h3><p>Ready to play within 1–3 days. Your games and saves stay put.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:0">
+    <div class="wrap ba">
+      <div class="race a-up" id="race">
+        <div class="race-head"><span class="kicker">Load test</span><span class="kicker" style="color:var(--cyan)">Same laptop</span></div>
+        <div class="lane">
+          <div class="lane-top"><b>Old hard drive</b><span class="st" id="st-hdd">Ready</span></div>
+          <div class="track"><i class="fill hdd" id="f-hdd"></i></div>
+        </div>
+        <div class="lane">
+          <div class="lane-top"><b>SSD upgrade</b><span class="st ok" id="st-ssd">Ready</span></div>
+          <div class="track"><i class="fill ssd" id="f-ssd"></i></div>
+        </div>
+        <button class="btn btn-ghost" type="button" id="race-again">Run it again</button>
+      </div>
+      <div class="ba-copy">
+        <span class="kicker a-up">PC &amp; laptop</span>
+        <h2 class="split">Slow laptop? It needs <em>an SSD.</em></h2>
+        <p class="a-up">Replacing an old hard drive with an SSD, and adding RAM, is the cheapest way to make a PC or laptop feel new again. Send your model and we tell you exactly what fits.</p>
+        <div class="ba-stats a-up">
+          <div><b>Before</b><span>Slow boot, laggy apps, endless loading</span></div>
+          <div><b>After</b><span>Fast boot, smooth multitasking</span></div>
+        </div>
+        <div class="a-up"><a class="btn btn-blue magnet" href="https://wa.me/96171127767?text=Hi%20TechLab!%20I%20want%20to%20upgrade%20my%20PC%2Flaptop.%20My%20model%20is%3A%20" target="_blank" rel="noopener">Ask what fits my device <span class="arr" aria-hidden="true">→</span></a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec tight" id="finder">
+    <div class="wrap">
+      <div class="head sm">
+        <span class="kicker a-up">Find your part</span>
+        <h2 class="split">Three taps to <em>the right part.</em></h2>
+        <p class="a-up">Pick your device, what you need and the size. Then send it to us on WhatsApp with one tap.</p>
+      </div>
+      <form class="finder" id="finder-form">
+        <div class="fpanel a-up">
+          <fieldset>
+            <legend><b>01</b>Device</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="device" id="dev-ps5" value="ps5" checked><span>PS5</span></label>
+              <label class="opt"><input type="radio" name="device" id="dev-pc" value="pc"><span>Desktop PC</span></label>
+              <label class="opt"><input type="radio" name="device" id="dev-laptop" value="laptop"><span>Laptop</span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend><b>02</b>What you need</legend>
+            <div class="opts" id="need-opts"></div>
+          </fieldset>
+          <fieldset>
+            <legend><b>03</b>Size</legend>
+            <div class="opts" id="size-opts"></div>
+          </fieldset>
+        </div>
+        <div class="result a-up" id="result" aria-live="polite">
+          <div class="result-top">
+            <div class="shot"><canvas class="pv" id="r-pv" data-model="nvme" aria-hidden="true"></canvas><img class="fb" id="r-img" src="img/p-nvme.jpg" alt=""></div>
+            <div><h3 id="r-title">PS5 SSD · 2 TB</h3><span class="status" id="r-status">Fits your console</span></div>
+          </div>
+          <dl class="rspec" id="r-spec"></dl>
+          <p class="note" id="r-note"></p>
+          <a class="btn btn-blue" id="r-send" href="https://wa.me/96171127767" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Send this to TechLab</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="sec" id="prices">
+    <div class="wrap" id="price-wrap" style="position:relative">
+      <div class="head">
+        <span class="kicker a-up">Prices</span>
+        <h2 class="split">Less than <em>the shops.</em></h2>
+        <p class="a-up">Prices change with the market, so we don't list them here. Tap any part and we'll send you today's price on WhatsApp, usually below what the shops charge.</p>
+      </div>
+      <ul class="plist" id="plist">
+        <li class="prow" data-model="nvme">
+          <h3>PS5 SSD</h3>
+          <div class="sizes"><span>1 TB</span><span>2 TB</span><span>4 TB</span></div>
+          <a class="btn btn-ghost" href="https://wa.me/96171127767?text=Hi%20TechLab!%20What%27s%20today%27s%20price%20for%20a%20PS5%20SSD%20with%20installation%3F%20Size%3A%20" target="_blank" rel="noopener">Get today's price</a>
+        </li>
+        <li class="prow" data-model="ram">
+          <h3>PC RAM</h3>
+          <div class="sizes"><span>16 GB kit</span><span>32 GB kit</span></div>
+          <a class="btn btn-ghost" href="https://wa.me/96171127767?text=Hi%20TechLab!%20What%27s%20today%27s%20price%20for%20PC%20RAM%3F%20My%20motherboard%20is%3A%20" target="_blank" rel="noopener">Get today's price</a>
+        </li>
+        <li class="prow" data-model="ram">
+          <h3>Laptop RAM</h3>
+          <div class="sizes"><span>8 GB</span><span>16 GB</span></div>
+          <a class="btn btn-ghost" href="https://wa.me/96171127767?text=Hi%20TechLab!%20What%27s%20today%27s%20price%20for%20laptop%20RAM%3F%20My%20laptop%20model%20is%3A%20" target="_blank" rel="noopener">Get today's price</a>
+        </li>
+        <li class="prow" data-model="sata">
+          <h3>PC &amp; laptop SSD</h3>
+          <div class="sizes"><span>512 GB</span><span>1 TB</span><span>2 TB</span></div>
+          <a class="btn btn-ghost" href="https://wa.me/96171127767?text=Hi%20TechLab!%20What%27s%20today%27s%20price%20for%20an%20SSD%20for%20my%20PC%2Flaptop%3F%20My%20model%20is%3A%20" target="_blank" rel="noopener">Get today's price</a>
+        </li>
+      </ul>
+      <div class="peek" id="peek" aria-hidden="true"><div class="shot"><canvas class="pv" id="peek-pv" data-model="nvme"></canvas></div></div>
+      <p class="price-note a-up">Not sure what your device takes? Send a photo of its model sticker and we'll tell you.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="faq">
+    <div class="wrap faq-grid">
+      <div>
+        <div class="head" style="margin-bottom:0">
+          <span class="kicker a-up">FAQ</span>
+          <h2 class="split">Before you <em>order.</em></h2>
+        </div>
+        <a class="ig a-up" href="https://www.instagram.com/techlab_lb/" target="_blank" rel="noopener">
+          <svg aria-hidden="true"><use href="#i-ig"/></svg>
+          <b>@techlab_lb</b>
+          <span>New stock, deals and installs. <em>Follow on Instagram →</em></span>
+        </a>
+      </div>
+      <div class="faq">
+        <details class="a-up"><summary>Will I lose my PS5 games or saves?<i aria-hidden="true"></i></summary><p class="ans">No. Only the new SSD gets formatted. Everything on the internal storage stays as it is, and you can move games over from the PS5's storage settings.</p></details>
+        <details class="a-up"><summary>Can you do it before GTA 6 comes out?<i aria-hidden="true"></i></summary><p class="ans">Yes, if you book early. Message us with your PS5 model and we'll give you a pickup slot before 19 November.</p></details>
+        <details class="a-up"><summary>How long does a PS5 upgrade take?<i aria-hidden="true"></i></summary><p class="ans">1–3 days from pickup to return. We give you a pickup and return time when you book.</p></details>
+        <details class="a-up"><summary>Are the parts original?<i aria-hidden="true"></i></summary><p class="ans">Yes. We sell genuine drives and memory from known brands.</p></details>
+        <details class="a-up"><summary>Where do you pick up from?<i aria-hidden="true"></i></summary><p class="ans">Anywhere in Lebanon. Send us your location on WhatsApp and we'll arrange a pickup time.</p></details>
+        <details class="a-up"><summary>How do I pay?<i aria-hidden="true"></i></summary><p class="ans">Whish or cash. You pay when your device comes back, upgraded.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="contact">
+    <div class="wrap">
+      <span class="kicker a-up" style="margin-bottom:28px">Order now</span>
+      <h2 id="cta-h"><span class="ln"><span>Let's</span></span><span class="ln"><span class="blue">upgrade.</span></span></h2>
+      <div class="cta-row">
+        <p class="a-up">Tell us your model on WhatsApp or Instagram. We reply with the right part and the price.</p>
+        <div class="cta-actions a-up">
+          <a class="btn btn-blue magnet" href="https://wa.me/96171127767" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Order on WhatsApp</a>
+          <a class="btn btn-ghost magnet" href="https://www.instagram.com/techlab_lb/" target="_blank" rel="noopener">Instagram <span class="arr" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="contact-lines a-up">
+        <div class="cline"><span class="k">WhatsApp</span><span class="v">+961 71 127 767</span><button class="copy-btn" type="button" id="copy-wa" data-copy="+96171127767" aria-label="Copy WhatsApp number">Copy</button></div>
+        <div class="cline"><span class="k">Instagram</span><span class="v">@techlab_lb</span><button class="copy-btn" type="button" id="copy-ig" data-copy="@techlab_lb" aria-label="Copy Instagram handle">Copy</button></div>
+      </div>
+      <div class="foot">
+        <a class="logo" href="#home" aria-label="TechLab home"><img src="img/logo.png" alt="TechLab" width="720" height="136"></a>
+        <nav aria-label="Footer"><a href="#parts">Parts</a><a href="#gta6">GTA 6</a><a href="#ps5">PS5 upgrade</a><a href="#finder">Find your part</a><a href="#prices">Prices</a><a href="#faq">FAQ</a></nav>
+        <p class="fine">PlayStation and PS5 are trademarks of Sony Interactive Entertainment. TechLab is an independent seller and installer, not affiliated with Sony or Rockstar Games.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<a class="fab" id="fab" href="https://wa.me/96171127767" target="_blank" rel="noopener" aria-label="Order on WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+<div class="ring" id="ring" aria-hidden="true"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(function () {
+  var doc = document.documentElement;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var mobile = window.matchMedia('(max-width: 899px)').matches;
+  var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  var hasGsap = !!(window.gsap && window.ScrollTrigger);
+  if (hasGsap) gsap.registerPlugin(ScrollTrigger);
+  var DPR = Math.min(window.devicePixelRatio || 1, mobile ? 1.6 : 2);
+  var shared = { scroll: 0, warm: 0, heroP: 0, mx: window.innerWidth * .6, my: window.innerHeight * .4 };
+  window.addEventListener('pointermove', function (e) { shared.mx = e.clientX; shared.my = e.clientY; }, { passive: true });
+
+  function onVisible(el, cb) {
+    if (!('IntersectionObserver' in window)) { cb(true); return; }
+    new IntersectionObserver(function (es) { es.forEach(function (e) { cb(e.isIntersecting); }); }, { rootMargin: '120px' }).observe(el);
+  }
+
+  /* ================= live shader background ================= */
+  (function initBG() {
+    var c = document.getElementById('bg');
+    var gl = null;
+    try { gl = c.getContext('webgl', { antialias: false, alpha: false, preserveDrawingBuffer: false }); } catch (e) {}
+    if (!gl) return;
+    var vs = 'attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}';
+    var fs = [
+      'precision mediump float;',
+      'uniform vec2 R;uniform float T;uniform vec2 M;uniform float W;uniform float S;',
+      'float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}',
+      'float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1.,0.)),f.x),mix(h(i+vec2(0.,1.)),h(i+vec2(1.,1.)),f.x),f.y);}',
+      'float fbm(vec2 p){float v=0.,a=.5;for(int i=0;i<5;i++){v+=a*n(p);p=p*2.03+vec2(1.7,9.2);a*=.5;}return v;}',
+      'void main(){',
+      ' vec2 uv=gl_FragCoord.xy/R;vec2 p=(gl_FragCoord.xy-.5*R)/R.y;',
+      ' float t=T*.045;',
+      ' vec2 q=vec2(fbm(p*1.25+vec2(0.,t)),fbm(p*1.25+vec2(5.2,1.3)-t));',
+      ' float f=fbm(p*1.5+2.4*q+vec2(t*.7,S*.6));',
+      ' vec3 base=vec3(.118);',
+      ' vec3 c1=mix(vec3(0.,.4,1.),vec3(1.,.24,.55),W);',
+      ' vec3 c2=mix(vec3(0.,1.,1.),vec3(1.,.54,.24),W);',
+      ' float band=smoothstep(.48,.98,f);',
+      ' vec3 col=base*(.62+.42*f);',
+      ' col+=c1*band*.34;',
+      ' col+=c2*pow(q.x*q.y,2.2)*.42;',
+      ' float rib=abs(p.y-.22*sin(p.x*1.7+T*.22+q.x*2.4)+S*.15);',
+      ' col+=c2*.05/(rib*12.+.5);',
+      ' float rib2=abs(p.y+.3-.18*sin(p.x*2.3-T*.17+q.y*2.));',
+      ' col+=c1*.045/(rib2*10.+.5);',
+      ' vec2 mp=(M-.5*R)/R.y;col+=c1*.11*exp(-5.*length(p-mp));',
+      ' vec2 g=abs(fract(p*6.)-.5);float grid=smoothstep(.49,.5,max(g.x,g.y));col+=c2*grid*.025*band;',
+      ' col*=1.-.55*dot(uv-.5,uv-.5);',
+      ' col+=(h(gl_FragCoord.xy+fract(T*7.))-.5)*.04;',
+      ' gl_FragColor=vec4(col,1.);',
+      '}'
+    ].join('\n');
+    function sh(type, src) { var s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); return gl.getShaderParameter(s, gl.COMPILE_STATUS) ? s : null; }
+    var v = sh(gl.VERTEX_SHADER, vs), f = sh(gl.FRAGMENT_SHADER, fs);
+    if (!v || !f) return;
+    var pr = gl.createProgram(); gl.attachShader(pr, v); gl.attachShader(pr, f); gl.linkProgram(pr);
+    if (!gl.getProgramParameter(pr, gl.LINK_STATUS)) return;
+    gl.useProgram(pr);
+    var buf = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+    var loc = gl.getAttribLocation(pr, 'a'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+    var uR = gl.getUniformLocation(pr, 'R'), uT = gl.getUniformLocation(pr, 'T'), uM = gl.getUniformLocation(pr, 'M'), uW = gl.getUniformLocation(pr, 'W'), uS = gl.getUniformLocation(pr, 'S');
+    var scale = mobile ? .4 : .55, W = 0, H = 0;
+    function size() { W = Math.max(1, Math.round(window.innerWidth * scale)); H = Math.max(1, Math.round(window.innerHeight * scale)); c.width = W; c.height = H; gl.viewport(0, 0, W, H); }
+    size(); window.addEventListener('resize', size);
+    var t0 = performance.now(), last = 0, mx = W / 2, my = H / 2, warm = 0;
+    function frame(now) {
+      requestAnimationFrame(frame);
+      if (document.hidden) return;
+      if (mobile && now - last < 33) return;
+      last = now;
+      warm += (shared.warm - warm) * .05;
+      mx += (shared.mx * scale - mx) * .06; my += ((window.innerHeight - shared.my) * scale - my) * .06;
+      gl.uniform2f(uR, W, H); gl.uniform1f(uT, reduce ? 12 : (now - t0) / 1000);
+      gl.uniform2f(uM, mx, my); gl.uniform1f(uW, warm); gl.uniform1f(uS, shared.scroll);
+      gl.drawArrays(gl.TRIANGLES, 0, 3);
+    }
+    requestAnimationFrame(frame);
+  })();
+
+  /* ================= 3D models ================= */
+  var fontsReady = (document.fonts && document.fonts.load)
+    ? Promise.all([document.fonts.load('900 120px Unbounded'), document.fonts.load('500 30px "JetBrains Mono"')]).catch(function () {})
+    : Promise.resolve();
+
+  function labelTex(w, h, draw) {
+    var cv = document.createElement('canvas'); cv.width = w; cv.height = h;
+    var tex = new THREE.CanvasTexture(cv); tex.encoding = THREE.sRGBEncoding; tex.anisotropy = 8;
+    function paint() { draw(cv.getContext('2d'), w, h); tex.needsUpdate = true; }
+    paint(); fontsReady.then(paint);
+    return tex;
+  }
+  function M() {
+    return {
+      pcb: new THREE.MeshStandardMaterial({ color: 0x0a0c11, roughness: .5, metalness: .35 }),
+      gold: new THREE.MeshStandardMaterial({ color: 0xe0b058, metalness: 1, roughness: .25, emissive: 0x3a2600, emissiveIntensity: .5 }),
+      alu: new THREE.MeshStandardMaterial({ color: 0x1d2129, metalness: .8, roughness: .3 }),
+      dark: new THREE.MeshStandardMaterial({ color: 0x0c0d10, metalness: .3, roughness: .6 }),
+      blue: new THREE.MeshBasicMaterial({ color: 0x0066ff }),
+      cyan: new THREE.MeshBasicMaterial({ color: 0x00ffff })
+    };
+  }
+  function box(w, h, d, mat) { return new THREE.Mesh(new THREE.BoxGeometry(w, h, d), mat); }
+
+  function buildNVMe(brand) {
+    var m = M(), g = new THREE.Group();
+    g.add(box(8, 0.1, 2.2, m.pcb));
+    for (var i = 0; i < 17; i++) { if (i === 5) continue; var f = box(0.5, 0.115, 0.085, m.gold); f.position.set(-3.74, 0, -1.03 + i * 0.129); g.add(f); }
+    var screw = new THREE.Mesh(new THREE.CylinderGeometry(0.24, 0.24, 0.115, 28), m.gold); screw.position.set(3.94, 0, 0); g.add(screw);
+    var sink = box(6.7, 0.34, 2.14, m.alu); sink.position.set(0.32, 0.22, 0); g.add(sink);
+    for (var s = 0; s < 2; s++) for (var k = 0; k < 8; k++) { var fin = box(0.07, 0.2, 2.02, m.alu); fin.position.set((s ? 2.12 : -2.86) + k * 0.17, 0.49, 0); g.add(fin); }
+    var a = box(6.72, 0.035, 0.03, m.blue); a.position.set(0.32, 0.3, 1.08); g.add(a);
+    var b = a.clone(); b.position.z = -1.08; g.add(b);
+    var led = box(0.12, 0.05, 0.12, m.cyan.clone()); led.position.set(3.45, 0.42, 0.85); g.add(led);
+    var tex = labelTex(1024, 512, function (c) {
+      c.fillStyle = '#07080b'; c.fillRect(0, 0, 1024, 512);
+      c.strokeStyle = 'rgba(0,255,255,.35)'; c.lineWidth = 3; c.strokeRect(22, 22, 980, 468);
+      c.textAlign = 'left'; c.textBaseline = 'alphabetic';
+      if (brand) {
+        c.font = '900 150px Unbounded, "Arial Black", sans-serif';
+        var w1 = c.measureText('TECH').width, w2 = c.measureText('LAB').width, sc = Math.min(1, 860 / (w1 + w2));
+        c.save(); c.translate(512 - (w1 + w2) * sc / 2, 280); c.scale(sc, sc);
+        c.fillStyle = '#fff'; c.fillText('TECH', 0, 0); c.fillStyle = '#0066ff'; c.fillText('LAB', w1, 0); c.restore();
+      } else {
+        c.font = '900 130px Unbounded, "Arial Black", sans-serif';
+        var w = c.measureText('NVMe').width, s2 = Math.min(1, 860 / w);
+        c.save(); c.translate(512 - w * s2 / 2, 270); c.scale(s2, s2); c.fillStyle = '#fff'; c.fillText('NVMe', 0, 0); c.restore();
+      }
+      c.textAlign = 'center'; c.font = '500 34px "JetBrains Mono", monospace'; c.fillStyle = '#00ffff';
+      c.fillText(brand ? 'NVMe · PCIe 4.0 · 2 TB' : 'PCIe 4.0 · M.2 2280', 512, 390);
+      c.fillStyle = 'rgba(255,255,255,.55)'; c.font = '500 24px "JetBrains Mono", monospace';
+      c.fillText(brand ? 'RAM & STORAGE UPGRADES' : 'SOLID STATE DRIVE', 512, 440);
+    });
+    var label = new THREE.Mesh(new THREE.PlaneGeometry(3.3, 1.65), new THREE.MeshStandardMaterial({ map: tex, roughness: .55, metalness: .1 }));
+    label.rotation.x = -Math.PI / 2; label.position.set(0, 0.395, 0); g.add(label);
+    g.userData.tick = function (t) { led.material.color.setHex((Math.floor(t * 2) % 2) ? 0x00ffff : 0x0a3a3a); };
+    return g;
+  }
+
+  function buildRAM() {
+    var m = M(), g = new THREE.Group();
+    g.add(box(8, 2.0, 0.07, m.pcb));
+    for (var i = 0; i < 38; i++) { var x = -3.75 + i * 0.2; if (Math.abs(x - 0.4) < 0.14) continue; var c = box(0.12, 0.3, 0.08, m.gold); c.position.set(x, -0.84, 0); g.add(c); }
+    var s = new THREE.Shape();
+    s.moveTo(-3.95, -0.6); s.lineTo(3.95, -0.6); s.lineTo(3.95, 0.72); s.lineTo(2.7, 0.72); s.lineTo(2.35, 1.02); s.lineTo(-2.35, 1.02); s.lineTo(-2.7, 0.72); s.lineTo(-3.95, 0.72); s.lineTo(-3.95, -0.6);
+    var eg = new THREE.ExtrudeGeometry(s, { depth: 0.09, bevelEnabled: true, bevelThickness: .02, bevelSize: .02, bevelSegments: 1 });
+    var front = new THREE.Mesh(eg, m.alu); front.position.z = 0.05; g.add(front);
+    var back = new THREE.Mesh(eg, m.alu); back.position.z = -0.16; g.add(back);
+    var bc = document.createElement('canvas'); bc.width = 512; bc.height = 8;
+    var bctx = bc.getContext('2d'), gr = bctx.createLinearGradient(0, 0, 512, 0);
+    gr.addColorStop(0, '#0066ff'); gr.addColorStop(.33, '#00ffff'); gr.addColorStop(.66, '#7a5cff'); gr.addColorStop(1, '#0066ff');
+    bctx.fillStyle = gr; bctx.fillRect(0, 0, 512, 8);
+    var btex = new THREE.CanvasTexture(bc); btex.wrapS = THREE.RepeatWrapping; btex.encoding = THREE.sRGBEncoding;
+    var bar = box(4.6, 0.14, 0.26, new THREE.MeshBasicMaterial({ map: btex })); bar.position.set(0, 1.1, 0); g.add(bar);
+    var tex = labelTex(1024, 288, function (c) {
+      c.clearRect(0, 0, 1024, 288); c.fillStyle = 'rgba(5,6,9,.92)'; c.fillRect(0, 0, 1024, 288);
+      c.fillStyle = '#0066ff'; c.fillRect(0, 0, 12, 288);
+      c.textAlign = 'left'; c.fillStyle = '#fff'; c.font = '900 150px Unbounded, "Arial Black", sans-serif'; c.fillText('DDR5', 60, 190);
+      c.fillStyle = '#00ffff'; c.font = '500 34px "JetBrains Mono", monospace'; c.fillText('DESKTOP & LAPTOP MEMORY', 64, 252);
+    });
+    var label = new THREE.Mesh(new THREE.PlaneGeometry(3.4, 0.96), new THREE.MeshStandardMaterial({ map: tex, roughness: .6, transparent: true }));
+    label.position.set(-0.6, 0.06, 0.165); g.add(label);
+    g.userData.tick = function (t) { btex.offset.x = t * 0.25; };
+    return g;
+  }
+
+  function buildSATA() {
+    var m = M(), g = new THREE.Group();
+    var body = box(7.0, 0.5, 5.0, m.alu); g.add(body);
+    var lip = box(7.04, 0.06, 5.04, m.dark); lip.position.y = -0.22; g.add(lip);
+    var tex = labelTex(1024, 720, function (c) {
+      c.fillStyle = '#0a0b0e'; c.fillRect(0, 0, 1024, 720);
+      var gr = c.createLinearGradient(0, 0, 1024, 720); gr.addColorStop(0, 'rgba(0,102,255,.35)'); gr.addColorStop(1, 'rgba(0,102,255,0)');
+      c.fillStyle = gr; c.fillRect(0, 0, 1024, 720);
+      c.strokeStyle = 'rgba(255,255,255,.12)'; c.lineWidth = 2; c.strokeRect(30, 30, 964, 660);
+      c.textAlign = 'left'; c.fillStyle = '#fff'; c.font = '900 210px Unbounded, "Arial Black", sans-serif'; c.fillText('SSD', 80, 400);
+      c.fillStyle = '#00ffff'; c.font = '500 44px "JetBrains Mono", monospace'; c.fillText('SATA III · 2.5"', 86, 500);
+      c.fillStyle = 'rgba(255,255,255,.5)'; c.font = '500 30px "JetBrains Mono", monospace'; c.fillText('SOLID STATE DRIVE', 86, 600);
+    });
+    var label = new THREE.Mesh(new THREE.PlaneGeometry(6.4, 4.5), new THREE.MeshStandardMaterial({ map: tex, roughness: .5, metalness: .2 }));
+    label.rotation.x = -Math.PI / 2; label.position.y = 0.252; g.add(label);
+    var conn = box(0.22, 0.28, 2.2, m.dark); conn.position.set(3.6, -0.02, -1.0); g.add(conn);
+    var pins = box(0.05, 0.08, 1.9, m.gold); pins.position.set(3.72, -0.02, -1.0); g.add(pins);
+    var strip = box(7.02, 0.03, 0.04, m.blue); strip.position.set(0, 0.1, 2.51); g.add(strip);
+    return g;
+  }
+
+  function buildExt() {
+    var m = M(), g = new THREE.Group();
+    var w = 6.2, h = 4.0, r = 0.6, s = new THREE.Shape();
+    s.moveTo(-w / 2 + r, -h / 2); s.lineTo(w / 2 - r, -h / 2); s.quadraticCurveTo(w / 2, -h / 2, w / 2, -h / 2 + r);
+    s.lineTo(w / 2, h / 2 - r); s.quadraticCurveTo(w / 2, h / 2, w / 2 - r, h / 2); s.lineTo(-w / 2 + r, h / 2);
+    s.quadraticCurveTo(-w / 2, h / 2, -w / 2, h / 2 - r); s.lineTo(-w / 2, -h / 2 + r); s.quadraticCurveTo(-w / 2, -h / 2, -w / 2 + r, -h / 2);
+    var geo = new THREE.ExtrudeGeometry(s, { depth: 0.42, bevelEnabled: true, bevelThickness: .12, bevelSize: .12, bevelSegments: 4, curveSegments: 10 });
+    geo.center();
+    var shell = new THREE.Mesh(geo, new THREE.MeshStandardMaterial({ color: 0x15181e, metalness: .65, roughness: .28 }));
+    shell.rotation.x = -Math.PI / 2; g.add(shell);
+    var tex = labelTex(1024, 512, function (c) {
+      c.clearRect(0, 0, 1024, 512);
+      c.textAlign = 'center'; c.fillStyle = 'rgba(255,255,255,.9)'; c.font = '800 96px Unbounded, "Arial Black", sans-serif'; c.fillText('PORTABLE', 512, 250);
+      c.fillStyle = '#00ffff'; c.font = '500 40px "JetBrains Mono", monospace'; c.fillText('USB-C · SSD', 512, 330);
+    });
+    var label = new THREE.Mesh(new THREE.PlaneGeometry(4.2, 2.1), new THREE.MeshBasicMaterial({ map: tex, transparent: true, opacity: .85 }));
+    label.rotation.x = -Math.PI / 2; label.position.y = 0.34; g.add(label);
+    var ring = box(5.0, 0.04, 0.05, m.blue); ring.position.set(0, 0.0, 2.17); g.add(ring);
+    var port = box(0.12, 0.14, 0.75, m.dark); port.position.set(3.24, 0, 0); g.add(port);
+    var led = box(0.06, 0.05, 0.3, m.cyan.clone()); led.position.set(3.23, 0.12, 1.1); g.add(led);
+    g.userData.tick = function (t) { var on = (Math.sin(t * 3) > 0.2); led.material.color.setHex(on ? 0x00ffff : 0x063a3a); };
+    return g;
+  }
+
+  function addLights(scene) {
+    scene.add(new THREE.AmbientLight(0x5a6478, .6));
+    var key = new THREE.DirectionalLight(0xffffff, 1.25); key.position.set(3, 7, 8); scene.add(key);
+    var b = new THREE.PointLight(0x0066ff, 3.2, 26); b.position.set(-5, -2.5, 4); scene.add(b);
+    var c = new THREE.PointLight(0x00ffff, 1.5, 22); c.position.set(6, 4, -3); scene.add(c);
+    var u = new THREE.PointLight(0x0066ff, 2.2, 14); u.position.set(1, -3, 2); scene.add(u);
+  }
+
+  /* ================= hero SSD ================= */
+  var hero = document.getElementById('home');
+  (function initHero() {
+    var canvas = document.getElementById('ssd');
+    if (!window.THREE) return;
+    var renderer;
+    try { renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true }); } catch (e) { return; }
+    if (!renderer.getContext()) return;
+    renderer.setPixelRatio(DPR); renderer.outputEncoding = THREE.sRGBEncoding;
+    var scene = new THREE.Scene(), camera = new THREE.PerspectiveCamera(30, 1, 0.1, 100);
+    camera.position.set(0, 0, 15);
+    var rig = new THREE.Group(); scene.add(rig);
+    var drive = buildNVMe(true); rig.add(drive);
+    var N = mobile ? 160 : 360, pos = new Float32Array(N * 3), pg = new THREE.BufferGeometry();
+    for (var p = 0; p < N; p++) { pos[p * 3] = (Math.random() - .5) * 26; pos[p * 3 + 1] = (Math.random() - .5) * 14; pos[p * 3 + 2] = (Math.random() - .5) * 10 - 2; }
+    pg.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+    var dots = new THREE.Points(pg, new THREE.PointsMaterial({ color: 0x3d8bff, size: 0.05, transparent: true, opacity: .8 }));
+    scene.add(dots); addLights(scene);
+    function size() {
+      var w = canvas.clientWidth, h = canvas.clientHeight; if (!w || !h) return;
+      renderer.setSize(w, h, false); camera.aspect = w / h; camera.updateProjectionMatrix();
+      var halfW = Math.tan(15 * Math.PI / 180) * 15 * camera.aspect;
+      if (window.innerWidth < 900) { rig.position.set(0, 0, 0); rig.scale.setScalar(Math.min(1.05, halfW / 4.5)); }
+      else { rig.position.set(Math.min(halfW * .42, 4.4), -0.2, 0); rig.scale.setScalar(Math.min(1.05, halfW / 6.2)); }
+    }
+    size(); window.addEventListener('resize', size);
+    var vis = true, t0 = performance.now(), tx = 0, ty = 0, spin = 0, lastY = window.scrollY;
+    onVisible(hero, function (v) { vis = v; });
+    // touch: drag to spin on phones
+    var dragX = null;
+    canvas.addEventListener('touchstart', function (e) { dragX = e.touches[0].clientX; }, { passive: true });
+    canvas.addEventListener('touchmove', function (e) { if (dragX === null) return; spin += (e.touches[0].clientX - dragX) * .012; dragX = e.touches[0].clientX; }, { passive: true });
+    canvas.addEventListener('touchend', function () { dragX = null; });
+    function frame(now) {
+      requestAnimationFrame(frame);
+      if (!vis || document.hidden) return;
+      var t = (now - t0) / 1000;
+      var mx = shared.mx / window.innerWidth - .5, my = shared.my / window.innerHeight - .5;
+      if (!finePointer) { mx = 0; my = 0; }
+      tx += (mx - tx) * .05; ty += (my - ty) * .05;
+      var dy = window.scrollY - lastY; lastY = window.scrollY; spin += dy * .002; spin *= .96;
+      var s = shared.heroP, idle = reduce ? 0 : 1;
+      drive.rotation.x = .62 + ty * .35 + s * .5 + idle * Math.sin(t * .8) * .04;
+      drive.rotation.y = -.55 + tx * .6 + s * 1.6 + idle * (Math.sin(t * .5) * .12 + t * .05) + spin;
+      drive.rotation.z = .12 + idle * Math.sin(t * .6) * .03;
+      drive.position.y = idle * Math.sin(t * 1.1) * .12 + s * 1.4;
+      dots.rotation.y = t * .02 + tx * .1; dots.position.y = s * 2;
+      if (drive.userData.tick) drive.userData.tick(t);
+      renderer.render(scene, camera);
+    }
+    requestAnimationFrame(frame);
+  })();
+
+  /* ================= product previews (one shared renderer) ================= */
+  var PV = (function initPreviews() {
+    if (!window.THREE) return null;
+    var cv = document.createElement('canvas'), r;
+    try { r = new THREE.WebGLRenderer({ canvas: cv, antialias: true, alpha: true }); } catch (e) { return null; }
+    if (!r.getContext()) return null;
+    doc.classList.add('gl');
+    r.outputEncoding = THREE.sRGBEncoding; r.setPixelRatio(1);
+    var RW = mobile ? 720 : 960, RH = Math.round(RW * 10 / 16);
+    r.setSize(RW, RH, false); r.setClearColor(0x000000, 0);
+    var scenes = {};
+    function mk(key, model, rx, sc, y) {
+      var scene = new THREE.Scene(); addLights(scene);
+      var holder = new THREE.Group(); holder.add(model); holder.rotation.x = rx; holder.scale.setScalar(sc); holder.position.y = y || 0; scene.add(holder);
+      var cam = new THREE.PerspectiveCamera(30, 16 / 10, .1, 100); cam.position.set(0, 0, 15);
+      scenes[key] = { scene: scene, cam: cam, model: model, holder: holder };
+    }
+    mk('nvme', buildNVMe(false), .7, 1.05, 0);
+    mk('ram', buildRAM(), .18, 1.15, -0.1);
+    mk('sata', buildSATA(), .78, 1.0, 0);
+    mk('ext', buildExt(), .8, 1.1, 0);
+    var views = [];
+    document.querySelectorAll('canvas.pv').forEach(function (c) {
+      var v = { c: c, ctx: c.getContext('2d'), vis: false, hover: 0, hoverT: 0, w: 0, h: 0, phase: Math.random() * 6, drag: 0 };
+      function size() { var w = Math.round(c.clientWidth * DPR), h = Math.round(c.clientHeight * DPR); if (w && h && (w !== v.w || h !== v.h)) { c.width = v.w = w; c.height = v.h = h; } }
+      size(); if ('ResizeObserver' in window) new ResizeObserver(size).observe(c); else window.addEventListener('resize', size);
+      onVisible(c, function (on) { v.vis = on; });
+      var card = c.closest('.part, .result') || c.parentElement;
+      card.addEventListener('pointerenter', function () { v.hoverT = 1; });
+      card.addEventListener('pointerleave', function () { v.hoverT = 0; });
+      var dx = null;
+      c.parentElement.addEventListener('touchstart', function (e) { dx = e.touches[0].clientX; }, { passive: true });
+      c.parentElement.addEventListener('touchmove', function (e) { if (dx === null) return; v.drag += (e.touches[0].clientX - dx) * .01; dx = e.touches[0].clientX; }, { passive: true });
+      c.parentElement.addEventListener('touchend', function () { dx = null; });
+      views.push(v);
+    });
+    var t0 = performance.now(), lastF = 0;
+    function frame(now) {
+      requestAnimationFrame(frame);
+      if (document.hidden) return;
+      if (mobile && now - lastF < 33) return;
+      lastF = now;
+      var t = (now - t0) / 1000;
+      for (var i = 0; i < views.length; i++) {
+        var v = views[i];
+        if (!v.vis || !v.w || v.c.offsetParent === null) continue;
+        if (v.c.id === 'peek-pv' && !document.getElementById('peek').classList.contains('on')) continue;
+        var S = scenes[v.c.getAttribute('data-model')]; if (!S) continue;
+        v.hover += (v.hoverT - v.hover) * .08;
+        var rate = reduce ? 0 : (.35 + v.hover * 1.4);
+        v.phase += rate * .016; v.drag *= .95; v.phase += v.drag * .1;
+        S.model.rotation.y = v.phase;
+        S.model.position.y = reduce ? 0 : Math.sin(t * 1.2 + i) * .12;
+        S.holder.scale.setScalar((S.baseScale || (S.baseScale = S.holder.scale.x)) * (1 + v.hover * .08));
+        if (S.model.userData.tick) S.model.userData.tick(t);
+        r.render(S.scene, S.cam);
+        v.ctx.clearRect(0, 0, v.w, v.h);
+        v.ctx.drawImage(cv, 0, 0, v.w, v.h);
+      }
+    }
+    requestAnimationFrame(frame);
+    return { scenes: scenes };
+  })();
+
+  /* ================= GTA countdown ================= */
+  (function countdown() {
+    var target = Date.UTC(2026, 10, 18, 22, 0, 0); // 19 Nov 2026 00:00 Beirut (UTC+2)
+    var els = { d: document.getElementById('cd-d'), h: document.getElementById('cd-h'), m: document.getElementById('cd-m'), s: document.getElementById('cd-s') };
+    var pill = document.getElementById('pill-days'), prev = {};
+    function pad(n) { return (n < 10 ? '0' : '') + n; }
+    function upd() {
+      var ms = Math.max(0, target - Date.now());
+      var v = { d: Math.floor(ms / 864e5), h: Math.floor(ms / 36e5) % 24, m: Math.floor(ms / 6e4) % 60, s: Math.floor(ms / 1e3) % 60 };
+      Object.keys(v).forEach(function (k) {
+        var txt = k === 'd' ? String(v.d) : pad(v[k]);
+        if (prev[k] !== txt) { els[k].textContent = txt; if (prev[k] !== undefined && !reduce) { els[k].classList.remove('tick'); void els[k].offsetWidth; els[k].classList.add('tick'); } prev[k] = txt; }
+      });
+      pill.textContent = ms > 0 ? 'GTA 6 · ' + v.d + 'd' : 'GTA 6 is out';
+      if (ms <= 0) { document.querySelector('#gta6 .lead').textContent = 'GTA 6 is out. Storage full? We pick up your PS5, fit an SSD and bring it back.'; }
+    }
+    upd(); setInterval(upd, 1000);
+  })();
+
+  /* ================= load race ================= */
+  var raceRun = (function race() {
+    var fh = document.getElementById('f-hdd'), fs = document.getElementById('f-ssd'), sh = document.getElementById('st-hdd'), ss = document.getElementById('st-ssd'), timers = [];
+    function run() {
+      timers.forEach(clearTimeout); timers = [];
+      [fh, fs].forEach(function (f) { f.style.transition = 'none'; f.style.transform = 'scaleX(0)'; });
+      sh.textContent = 'Loading…'; sh.classList.remove('ok'); ss.textContent = 'Loading…'; ss.classList.remove('ok');
+      void fh.offsetWidth;
+      if (reduce) { fh.style.transform = fs.style.transform = 'scaleX(1)'; sh.textContent = 'Slow'; ss.textContent = 'Fast'; ss.classList.add('ok'); return; }
+      fs.style.transition = 'transform 1.1s cubic-bezier(.2,.8,.2,1)'; fs.style.transform = 'scaleX(1)';
+      fh.style.transition = 'transform 6.5s steps(16, end)'; fh.style.transform = 'scaleX(1)';
+      timers.push(setTimeout(function () { ss.textContent = 'Ready'; ss.classList.add('ok'); }, 1150));
+      timers.push(setTimeout(function () { sh.textContent = 'Still loading…'; }, 2500));
+      timers.push(setTimeout(function () { sh.textContent = 'Ready'; }, 6600));
+    }
+    document.getElementById('race-again').addEventListener('click', run);
+    return run;
+  })();
+
+  /* ================= finder ================= */
+  var WA = 'https://wa.me/96171127767?text=';
+  var DATA = {
+    ps5: { needs: { ssd: 'Storage' },
+      ssd: { sizes: ['1 TB', '2 TB', '4 TB'], def: 1, model: 'nvme', img: 'img/p-nvme.jpg', title: 'PS5 SSD', status: ['ok', 'Fits your console'],
+        spec: [['Slot', 'M.2 expansion slot'], ['Interface', 'PCIe Gen4 x4 NVMe'], ['Read speed', '5,500 MB/s or faster'], ['Cooling', 'Heatsink fitted'], ['Service', 'Pickup → install → return'], ['Turnaround', '1–3 days, anywhere in Lebanon']],
+        note: 'Works in the standard PS5, Slim and Pro. Your games and saves stay where they are.',
+        msg: 'a {size} SSD for my PS5, with pickup and installation. My PS5 model is: ' } },
+    pc: { needs: { ram: 'RAM', ssd: 'Storage' },
+      ram: { sizes: ['16 GB', '32 GB'], def: 1, model: 'ram', img: 'img/p-ram.jpg', title: 'Desktop RAM', status: ['check', 'Send your model'],
+        spec: [['Type', 'DIMM (desktop)'], ['Generation', 'DDR4 or DDR5'], ['Speed', 'Matched to your board'], ['We need', 'Motherboard model']],
+        note: 'DDR4 and DDR5 are not interchangeable, so we confirm your motherboard before you pay.',
+        msg: '{size} of RAM for my desktop PC. My motherboard model is: ' },
+      ssd: { sizes: ['512 GB', '1 TB', '2 TB'], def: 1, model: 'nvme', img: 'img/p-nvme.jpg', title: 'Desktop SSD', status: ['check', 'Send your model'],
+        spec: [['Interface', 'M.2 NVMe or 2.5" SATA'], ['Depends on', 'Your free slots'], ['Install', 'Available'], ['We need', 'PC or motherboard model']],
+        note: 'Most recent boards take a fast M.2 NVMe drive. Older PCs may need SATA; we check for you.',
+        msg: 'a {size} SSD for my desktop PC. My PC or motherboard model is: ' } },
+    laptop: { needs: { ram: 'RAM', ssd: 'Storage' },
+      ram: { sizes: ['8 GB', '16 GB'], def: 1, model: 'ram', img: 'img/p-ram.jpg', title: 'Laptop RAM', status: ['check', 'Send your model'],
+        spec: [['Type', 'SO-DIMM (laptop)'], ['Generation', 'DDR4 or DDR5'], ['Watch for', 'Soldered memory'], ['We need', 'Laptop model or sticker photo']],
+        note: 'Some thin laptops have RAM soldered to the board. Send the model and we tell you if it can be upgraded.',
+        msg: '{size} of RAM for my laptop. My laptop model is: ' },
+      ssd: { sizes: ['512 GB', '1 TB'], def: 1, model: 'sata', img: 'img/p-sata.jpg', title: 'Laptop SSD', status: ['check', 'Send your model'],
+        spec: [['Interface', 'M.2 NVMe or 2.5" SATA'], ['Fit', 'Matched to your model'], ['Install', 'Available'], ['We need', 'Laptop model or sticker photo']],
+        note: 'Swapping an old hard drive for an SSD is the cheapest way to make a laptop fast again.',
+        msg: 'a {size} SSD for my laptop. My laptop model is: ' } }
+  };
+  var form = document.getElementById('finder-form'), needOpts = document.getElementById('need-opts'), sizeOpts = document.getElementById('size-opts'), result = document.getElementById('result');
+  function val(n) { var el = form.querySelector('input[name="' + n + '"]:checked'); return el ? el.value : null; }
+  function opt(name, id, value, label, checked) {
+    var l = document.createElement('label'); l.className = 'opt';
+    var i = document.createElement('input'); i.type = 'radio'; i.name = name; i.id = id; i.value = value; i.checked = checked;
+    var s = document.createElement('span'); s.textContent = label; l.appendChild(i); l.appendChild(s); return l;
+  }
+  function buildNeeds(keep) {
+    var d = DATA[val('device')], keys = Object.keys(d.needs), pick = keys.indexOf(keep) > -1 ? keep : keys[0];
+    needOpts.textContent = ''; keys.forEach(function (k) { needOpts.appendChild(opt('need', 'need-' + k, k, d.needs[k], k === pick)); });
+  }
+  function buildSizes() {
+    var it = DATA[val('device')][val('need')]; sizeOpts.textContent = '';
+    it.sizes.forEach(function (s, i) { sizeOpts.appendChild(opt('size', 'size-' + s.replace(/\s/g, ''), s, s, i === it.def)); });
+  }
+  function render(anim) {
+    var it = DATA[val('device')][val('need')], size = val('size');
+    document.getElementById('r-title').textContent = it.title + ' · ' + size;
+    var stt = document.getElementById('r-status'); stt.textContent = it.status[1]; stt.setAttribute('data-tone', it.status[0]);
+    document.getElementById('r-pv').setAttribute('data-model', it.model);
+    document.getElementById('r-img').src = it.img;
+    var dl = document.getElementById('r-spec'); dl.textContent = '';
+    it.spec.forEach(function (r) { var d = document.createElement('div'), dt = document.createElement('dt'), dd = document.createElement('dd'); dt.textContent = r[0]; dd.textContent = r[1]; d.appendChild(dt); d.appendChild(dd); dl.appendChild(d); });
+    document.getElementById('r-note').textContent = it.note;
+    document.getElementById('r-send').href = WA + encodeURIComponent("Hi TechLab! I'd like " + it.msg.replace('{size}', size));
+    if (anim && !reduce) { result.classList.remove('swap'); void result.offsetWidth; result.classList.add('swap'); }
+  }
+  form.addEventListener('change', function (e) {
+    if (e.target.name === 'device') { buildNeeds(val('need')); buildSizes(); } else if (e.target.name === 'need') buildSizes();
+    render(true);
+  });
+  form.addEventListener('submit', function (e) { e.preventDefault(); });
+  buildNeeds(null); buildSizes(); render(false);
+
+  /* ================= price peek ================= */
+  var peek = document.getElementById('peek'), peekPv = document.getElementById('peek-pv'), plist = document.getElementById('plist');
+  if (finePointer && !mobile) {
+    var pw = document.getElementById('price-wrap'), px = 0, py = 0, cx = 0, cy = 0, live = false;
+    plist.querySelectorAll('.prow').forEach(function (row) {
+      row.addEventListener('pointerenter', function () { peekPv.setAttribute('data-model', row.getAttribute('data-model')); peek.classList.add('on'); });
+    });
+    plist.addEventListener('pointerleave', function () { peek.classList.remove('on'); });
+    pw.addEventListener('pointermove', function (e) { var b = pw.getBoundingClientRect(); px = e.clientX - b.left + 180; py = e.clientY - b.top; if (!live) { cx = px; cy = py; live = true; loop(); } });
+    function loop() { cx += (px - cx) * .14; cy += (py - cy) * .14; peek.style.left = cx + 'px'; peek.style.top = cy + 'px'; requestAnimationFrame(loop); }
+  }
+
+  /* ================= mobile menu ================= */
+  var menuBtn = document.getElementById('menu-btn'), drawer = document.getElementById('drawer'), topBar = document.getElementById('top-bar');
+  function setMenu(open) {
+    drawer.hidden = !open; menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); topBar.classList.toggle('open', open);
+  }
+  menuBtn.addEventListener('click', function () { setMenu(drawer.hidden); });
+  drawer.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !drawer.hidden) { setMenu(false); menuBtn.focus(); } });
+  window.addEventListener('resize', function () { if (window.innerWidth >= 980 && !drawer.hidden) setMenu(false); });
+
+  /* ================= header, fab, copy, magnet, cursor ================= */
+  var bar = document.getElementById('top-bar'), fab = document.getElementById('fab'), lastY = 0;
+  function onScrollUI() {
+    var y = window.scrollY;
+    bar.classList.toggle('solid', y > 40);
+    if (y > 500 && y > lastY + 4 && drawer.hidden) bar.classList.add('hide'); else if (y < lastY - 4 || y < 500) bar.classList.remove('hide');
+    var ct = document.getElementById('contact').getBoundingClientRect().top;
+    fab.classList.toggle('away', ct < window.innerHeight * .7);
+    lastY = y;
+  }
+  window.addEventListener('scroll', onScrollUI, { passive: true }); onScrollUI();
+
+  document.querySelectorAll('.copy-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var text = btn.getAttribute('data-copy');
+      function done() { btn.textContent = 'Copied'; btn.setAttribute('data-done', ''); setTimeout(function () { btn.textContent = 'Copy'; btn.removeAttribute('data-done'); }, 2000); }
+      function fallback() { var r = document.createRange(); r.selectNodeContents(btn.previousElementSibling); var s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = 'Selected'; setTimeout(function () { btn.textContent = 'Copy'; }, 2000); }
+      try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+    });
+  });
+
+  if (!reduce && finePointer) {
+    document.querySelectorAll('.magnet').forEach(function (b) {
+      b.addEventListener('pointermove', function (e) { var r = b.getBoundingClientRect(); b.style.transform = 'translate(' + ((e.clientX - r.left - r.width / 2) * .22) + 'px,' + ((e.clientY - r.top - r.height / 2) * .32) + 'px)'; });
+      b.addEventListener('pointerleave', function () { b.style.transform = ''; });
+    });
+    var ring = document.getElementById('ring'), rx = 0, ry = 0;
+    document.addEventListener('pointermove', function () { ring.classList.add('on'); });
+    document.addEventListener('pointerleave', function () { ring.classList.remove('on'); });
+    document.addEventListener('pointerover', function (e) { ring.classList.toggle('big', !!e.target.closest('a, button, label, summary, .prow')); });
+    (function rl() { rx += (shared.mx - rx) * .2; ry += (shared.my - ry) * .2; ring.style.transform = 'translate(' + rx + 'px,' + ry + 'px) translate(-50%,-50%)'; requestAnimationFrame(rl); })();
+  }
+
+  (function bgMouse() {
+    var mv = document.getElementById('gta-move'), sec = document.getElementById('gta6');
+    if (reduce || !finePointer) return;
+    var x = 0, y = 0, cx = 0, cy = 0, on = false;
+    sec.addEventListener('pointermove', function (e) { var b = sec.getBoundingClientRect(); x = (e.clientX - b.left) / b.width - .5; y = (e.clientY - b.top) / b.height - .5; if (!on) { on = true; loop(); } });
+    function loop() { cx += (x - cx) * .06; cy += (y - cy) * .06; mv.style.transform = 'translate3d(' + (-cx * 26).toFixed(1) + 'px,' + (-cy * 18).toFixed(1) + 'px,0) scale(1.06)'; requestAnimationFrame(loop); }
+  })();
+
+  /* ================= split headings + statement ================= */
+  function appendWords(parent, text) {
+    text.split(/(\s+)/).forEach(function (p) {
+      if (!p) return;
+      if (/^\s+$/.test(p)) { parent.appendChild(document.createTextNode(' ')); return; }
+      var w = document.createElement('span'); w.className = 'sw'; var i = document.createElement('span'); i.className = 'si'; i.textContent = p; w.appendChild(i); parent.appendChild(w);
+    });
+  }
+  document.querySelectorAll('.split').forEach(function (el) {
+    var frag = document.createDocumentFragment();
+    Array.prototype.slice.call(el.childNodes).forEach(function (node) {
+      if (node.nodeType === 3) appendWords(frag, node.textContent.replace(/ /g, ' '));
+      else if (node.nodeType === 1) { var wrap = node.cloneNode(false); appendWords(wrap, node.textContent.replace(/ /g, ' ')); frag.appendChild(wrap); }
+    });
+    el.textContent = ''; el.appendChild(frag);
+  });
+  var st = document.getElementById('statement'), hl = { 'PS5,': 1, 'Gen4': 1, 'SSD': 1, 'back': 1, 'GTA': 1, '6?': 1 };
+  var words = st.textContent.trim().split(/\s+/); st.textContent = '';
+  words.forEach(function (w, i) { var s = document.createElement('span'); s.className = 'w' + (hl[w] ? ' hl' : ''); s.textContent = w; st.appendChild(s); if (i < words.length - 1) st.appendChild(document.createTextNode(' ')); });
+
+  /* ================= scroll choreography ================= */
+  var stepsEls = document.querySelectorAll('#steps li');
+  if (!hasGsap || reduce) {
+    doc.classList.add('static');
+    document.getElementById('parts').classList.add('no-pin');
+    stepsEls.forEach(function (li) { li.classList.add('on'); });
+    return;
+  }
+
+  var lenis = null;
+  if (window.Lenis) {
+    try {
+      lenis = new Lenis({ duration: 1.15, smoothWheel: true });
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add(function (t) { lenis.raf(t * 1000); });
+      gsap.ticker.lagSmoothing(0);
+    } catch (e) { lenis = null; }
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var id = a.getAttribute('href'); var el = id.length > 1 && document.querySelector(id);
+      if (!el) return; e.preventDefault();
+      if (lenis) lenis.scrollTo(el, { offset: -60 }); else el.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  // global scroll value for the background
+  ScrollTrigger.create({ start: 0, end: 'max', onUpdate: function (s) { shared.scroll = s.progress * 3; } });
+  // warm the background inside the GTA section
+  ScrollTrigger.create({ trigger: '#gta6', start: 'top 70%', end: 'bottom 30%', onToggle: function (s) { shared.warm = s.isActive ? 1 : 0; } });
+
+  // hero intro
+  var intro = gsap.timeline({ defaults: { ease: 'power4.out' } });
+  intro.from('.hero h1 .ln > span', { yPercent: 110, duration: 1.2, stagger: .12 }, .15)
+       .from('.a-hero', { y: 34, opacity: 0, duration: 1, stagger: .08, ease: 'power3.out' }, .35)
+       .from('#ssd', { opacity: 0, scale: .9, duration: 1.6, ease: 'power2.out' }, 0)
+       .from('.top', { yPercent: -100, duration: 1, ease: 'power3.out', clearProps: 'transform' }, .2);
+  ScrollTrigger.create({ trigger: hero, start: 'top top', end: 'bottom top', scrub: true, onUpdate: function (s) { shared.heroP = s.progress; } });
+  gsap.to('.hero-copy', { yPercent: -16, opacity: .15, ease: 'none', scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: true } });
+
+  // marquee driven by scroll velocity
+  var mq = document.getElementById('mq'), mqX = 0, dir = -1, boost = 0;
+  ScrollTrigger.create({ start: 0, end: 'max', onUpdate: function (s) { var v = s.getVelocity(); if (v) dir = v < 0 ? 1 : -1; boost = Math.min(Math.abs(v) / 110, 16); } });
+  gsap.ticker.add(function () {
+    var half = mq.scrollWidth / 2; mqX += dir * (0.7 + boost); boost *= .92;
+    if (mqX <= -half) mqX += half; if (mqX > 0) mqX -= half;
+    mq.style.transform = 'translate3d(' + mqX + 'px,0,0)';
+  });
+  gsap.from('.marquee', { scaleY: .4, opacity: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '.marquee', start: 'top 95%' } });
+
+  // kickers draw their line
+  gsap.utils.toArray('.kicker').forEach(function (k) {
+    if (k.closest('.hero')) return;
+    gsap.from(k, { x: -20, opacity: 0, duration: .8, ease: 'power3.out', scrollTrigger: { trigger: k, start: 'top 92%' } });
+  });
+
+  // split headings
+  gsap.utils.toArray('.split').forEach(function (h) {
+    gsap.from(h.querySelectorAll('.si'), { yPercent: 115, rotate: 4, duration: 1.05, ease: 'power4.out', stagger: .055, scrollTrigger: { trigger: h, start: 'top 90%' } });
+  });
+
+  // generic reveals
+  ScrollTrigger.batch('.a-up', {
+    start: 'top 92%', once: true,
+    onEnter: function (els) { gsap.fromTo(els, { y: 46, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: 'power3.out', stagger: .08, overwrite: true }); }
+  });
+  gsap.set('.a-up', { opacity: 0 });
+
+  // parts rail
+  var mm = gsap.matchMedia();
+  mm.add('(min-width: 900px)', function () {
+    var rail = document.getElementById('rail'), pin = document.getElementById('rail-pin');
+    function dist() { return Math.max(0, rail.scrollWidth - window.innerWidth); }
+    var tw = gsap.to(rail, { x: function () { return -dist(); }, ease: 'none',
+      scrollTrigger: { trigger: pin, start: 'top top', end: function () { return '+=' + dist(); }, pin: true, scrub: .6, invalidateOnRefresh: true,
+        onUpdate: function (s) { document.getElementById('rail-bar').style.transform = 'scaleX(' + s.progress + ')'; } } });
+    gsap.utils.toArray('.part').forEach(function (p) {
+      gsap.fromTo(p, { rotateY: -18, y: 60, opacity: .3 }, { rotateY: 0, y: 0, opacity: 1, ease: 'power2.out',
+        scrollTrigger: { trigger: p, containerAnimation: tw, start: 'left 95%', end: 'left 55%', scrub: true } });
+    });
+    return function () {};
+  });
+  mm.add('(max-width: 899px)', function () {
+    document.getElementById('parts').classList.add('no-pin');
+    gsap.from('.part', { y: 60, opacity: 0, duration: .9, ease: 'power3.out', stagger: .1, scrollTrigger: { trigger: '#rail', start: 'top 88%' } });
+    return function () { document.getElementById('parts').classList.remove('no-pin'); };
+  });
+
+  // GTA section: count boxes pop, parallax copy
+  gsap.from('#count > div', { y: 40, opacity: 0, scale: .8, duration: .9, ease: 'back.out(1.6)', stagger: .09, scrollTrigger: { trigger: '#count', start: 'top 90%' } });
+  gsap.to('.gta-copy', { yPercent: -10, ease: 'none', scrollTrigger: { trigger: '#gta6', start: 'top bottom', end: 'bottom top', scrub: true } });
+  gsap.from('#gta-bg', { opacity: 0, duration: 1.4, ease: 'power2.out', scrollTrigger: { trigger: '#gta6', start: 'top 85%' } });
+
+  // statement word scrub
+  var ws = st.querySelectorAll('.w');
+  ScrollTrigger.create({ trigger: st, start: 'top 82%', end: 'bottom 45%', scrub: true,
+    onUpdate: function (s) { var n = Math.round(s.progress * ws.length); for (var i = 0; i < ws.length; i++) ws[i].style.opacity = i < n ? 1 : .16; } });
+  gsap.from(stepsEls, { y: 50, opacity: 0, duration: .9, ease: 'power3.out', stagger: .12, scrollTrigger: { trigger: '#steps', start: 'top 88%' } });
+  stepsEls.forEach(function (li, i) { ScrollTrigger.create({ trigger: li, start: 'top 85%', onEnter: function () { setTimeout(function () { li.classList.add('on'); }, i * 160); } }); });
+
+  // race starts when seen
+  ScrollTrigger.create({ trigger: '#race', start: 'top 75%', once: true, onEnter: function () { setTimeout(raceRun, 250); } });
+
+  // prices rows
+  gsap.from('.prow', { x: -40, opacity: 0, duration: .9, ease: 'power3.out', stagger: .1, scrollTrigger: { trigger: '#plist', start: 'top 85%' } });
+  gsap.utils.toArray('.prow .sizes span').forEach(function (s, i) { gsap.from(s, { opacity: 0, y: 10, duration: .6, delay: (i % 3) * .08, scrollTrigger: { trigger: s, start: 'top 95%' } }); });
+
+  // CTA giant type
+  gsap.from('#cta-h .ln > span', { yPercent: 110, duration: 1.3, ease: 'power4.out', stagger: .14, scrollTrigger: { trigger: '#cta-h', start: 'top 88%' } });
+  gsap.from('.foot', { opacity: 0, y: 30, duration: 1, scrollTrigger: { trigger: '.foot', start: 'top 98%' } });
+
+  window.addEventListener('load', function () { ScrollTrigger.refresh(); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { ScrollTrigger.refresh(); });
+  // safety: anything a trigger missed becomes visible
+  setTimeout(function () { ScrollTrigger.refresh(); }, 1500);
+})();
+</script>
+</body>
+</html>
