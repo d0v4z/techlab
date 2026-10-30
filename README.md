@@ -6,7 +6,7 @@ Live at https://d0v4z.github.io/techlab/ (GitHub Pages, `main` branch, root fold
 
 ## Editing
 
-- **Prices:** search `$220` and `$430` in `index.html`. Update the visible prices, the WhatsApp links that mention them (`%24220`, `%24430`) and the `"price"` values in the `application/ld+json` block near the top.
+- **Prices:** search `$230` and `$430` in `index.html`. Update the visible prices, the WhatsApp links that mention them (`%24230`, `%24430`) and the `"price"` values in the `application/ld+json` block near the top.
 - **WhatsApp number:** search `96171127767`.
 - **Arabic text:** every translatable line has a `data-i18n` key; the Arabic version of each key is in the `AR` list in the script at the bottom.
 - **GTA 6 countdown:** search `Date.UTC(2026, 10, 18, 22` (midnight 19 November, Beirut time). After launch the section switches to a "Storage full?" message on its own.
