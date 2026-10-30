@@ -107,6 +107,10 @@ img { display: block; max-width: 100%; height: auto; }
 .sec-head h2 { font-size: clamp(28px, 5.4vw, 46px); margin-top: 14px; }
 .sec-head p { color: var(--muted); margin-top: 14px; font-size: 17px; }
 .blue { color: var(--blue-hi); }
+.en { color: var(--subtle); font: 600 14px/1.4 var(--f-body); letter-spacing: .02em; margin-top: 10px; }
+.hero .en { font-size: 16px; }
+.sec-head .en, .about .en { color: var(--subtle); font-size: 14px; margin-top: 10px; }
+[dir="rtl"] .en { display: none; }
 
 /* Buttons */
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 54px; padding: 0 26px; border-radius: 999px; text-decoration: none; cursor: pointer; font: 800 15px/1 var(--f-body); border: 1px solid transparent; transition: background .25s, border-color .25s, transform .25s; white-space: nowrap; }
@@ -293,8 +297,10 @@ footer img { height: 22px; width: auto; }
     <div class="wrap">
       <div>
         <span class="kicker" data-i18n="hero_kicker">PS5 storage upgrades · Lebanon</span>
-        <h1 data-i18n="hero_h1">Aktar ma7al.<br><span class="blue">Aktar al3ab.</span></h1>
-        <p class="lede" data-i18n="hero_lede">We pick up your PS5, install a new SSD, test it and bring it back in 1–3 days. <b>Ma btedfa3 ella lamma yerja3 w yeshteghel.</b></p>
+        <h1 data-i18n="hero_h1">Ma7al aktar,<br><span class="blue">al3ab aktar.</span></h1>
+        <p class="en">More space. More games.</p>
+        <p class="lede" data-i18n="hero_lede">We pick up your PS5, install a new SSD, test it and bring it back in 1–3 days. <b>Ma btedfa3 ela lama yerja3 w byeshteghil 100%.</b></p>
+        <p class="en">You only pay once it's back and 100% working.</p>
         <div class="hero-ctas">
           <a class="btn btn-blue wa" href="https://wa.me/96171127767?text=Hi%20TechLab!%20I%20want%20to%20upgrade%20my%20PS5%20storage." target="_blank" rel="noopener" data-track="hero"><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-i18n="book">Book on WhatsApp</span></a>
           <a class="btn btn-ghost" href="#packages"><span data-i18n="see_prices">See prices</span> <span aria-hidden="true">→</span></a>
@@ -345,7 +351,7 @@ footer img { height: 22px; width: auto; }
     <div class="wrap">
       <div class="sec-head rv">
         <span class="kicker" data-i18n="pk_kicker">Prices</span>
-        <h2 data-i18n="pk_h">Se3r wa7ad.<br>Kel shi ma2moul.</h2>
+        <h2 data-i18n="pk_h">Se3r wahad,<br>la a2al wala aktar.</h2>
         <p data-i18n="pk_p">One price, everything included. No extra fee for pickup, delivery or installation. The price you see is the price you pay.</p>
       </div>
       <div class="packs">
@@ -377,7 +383,7 @@ footer img { height: 22px; width: auto; }
           <a class="btn btn-blue wa" href="https://wa.me/96171127767?text=Hi%20TechLab!%20I%20want%20the%20PS5%202%20TB%20upgrade%20(%24430).%20My%20area%20is%3A%20" target="_blank" rel="noopener" data-track="pack-2tb"><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-i18n="book2">Book 2 TB 3al WhatsApp</span></a>
         </article>
       </div>
-      <p class="pack-foot rv" data-i18n="pk_foot">That's about $30 more than the drive alone costs in shops right now (checked 30 Oct 2026), w ma btetla3 men el bet. Memory prices are rising worldwide, so prices can change; the price we confirm on WhatsApp is final. Need 4 TB? <a href="https://wa.me/96171127767?text=Hi%20TechLab!%20Can%20I%20get%20a%20price%20for%20a%204%20TB%20PS5%20SSD%3F" target="_blank" rel="noopener" data-track="4tb">Ask us</a>.</p>
+      <p class="pack-foot rv" data-i18n="pk_foot">That's about $30 more than the drive alone costs in shops right now (checked 30 Oct 2026), w ma btefshokh fashka mnel beit. Memory prices are rising worldwide, so prices can change; the price we confirm on WhatsApp is final. Need 4 TB? <a href="https://wa.me/96171127767?text=Hi%20TechLab!%20Can%20I%20get%20a%20price%20for%20a%204%20TB%20PS5%20SSD%3F" target="_blank" rel="noopener" data-track="4tb">Ask us</a>.</p>
     </div>
   </section>
 
@@ -385,7 +391,8 @@ footer img { height: 22px; width: auto; }
     <div class="wrap">
       <div class="sec-head rv">
         <span class="kicker" data-i18n="how_kicker">How it works</span>
-        <h2 data-i18n="how_h">Ma btetla3 men el bet.</h2>
+        <h2 data-i18n="how_h">Ma btefshokh fashka mnel beit.<br><span class="blue">Trok l ham 3layna.</span></h2>
+        <p class="en">You never leave the house. Leave the hassle to us.</p>
       </div>
       <ol class="steps">
         <li class="rv"><h3 data-i18n="st1_h">Ba3etlna</h3><p data-i18n="st1_p">Tell us your PS5 model, the size you want and your area. We confirm the price and a pickup time.</p></li>
@@ -418,7 +425,8 @@ footer img { height: 22px; width: auto; }
         <div class="avatar" aria-hidden="true">A</div>
         <div>
           <span class="kicker" data-i18n="ab_kicker">Who we are</span>
-          <h2 data-i18n="ab_h">Ahla, ana Adnan.</h2>
+          <h2 data-i18n="ab_h">Kifkon, ana Adnan.</h2>
+          <p class="en">Hi, I'm Adnan.</p>
           <p data-i18n="ab_p">I run TechLab. I pick up your PS5 myself, install the drive, test it and bring it back, and I keep you updated on WhatsApp at every step. One person, one console at a time, done properly.</p>
         </div>
       </div>
@@ -429,7 +437,7 @@ footer img { height: 22px; width: auto; }
     <div class="wrap">
       <div class="sec-head rv">
         <span class="kicker" data-i18n="sp_kicker">Why upgrade</span>
-        <h2 data-i18n="sp_h">El PS5 byemtele asra3 ma btfakker.</h2>
+        <h2 data-i18n="sp_h">Storage l PS5 byentele asra3 mn ma btfaker.</h2>
         <p data-i18n="sp_p">Your PS5 fills up faster than you think. Big games can take 100 GB or more each. Here's roughly how much room you start with.</p>
       </div>
       <div class="space">
@@ -446,6 +454,7 @@ footer img { height: 22px; width: auto; }
       <div class="sec-head rv">
         <span class="kicker" data-i18n="faq_kicker">FAQ</span>
         <h2 data-i18n="faq_h">Abel ma te7joz.</h2>
+        <p class="en">Before you book.</p>
       </div>
       <div class="faq">
         <details class="rv"><summary data-i18n="q1">Will I lose my games or saves?</summary><div class="a" data-i18n="a1">No. Only the new SSD is formatted. Everything on your PS5's internal storage stays as it is, and you can move games to the new drive from Settings → Storage.</div></details>
@@ -462,7 +471,7 @@ footer img { height: 22px; width: auto; }
 
   <section class="cta" id="contact">
     <div class="wrap">
-      <h2 data-i18n="cta_h">Ba2a ma tem7i.<br><span class="blue">Yalla el3ab.</span></h2>
+      <h2 data-i18n="cta_h">Ma ba2a temhe al3ab,<br><span class="blue">nazil w l3ab.</span></h2>
       <p data-i18n="cta_p">Stop deleting, start playing. Send us your PS5 model and your area, w mnerja3lak b wa2t el pickup.</p>
       <div class="hero-ctas">
         <a class="btn btn-blue wa" href="https://wa.me/96171127767?text=Hi%20TechLab!%20I%20want%20to%20upgrade%20my%20PS5%20storage." target="_blank" rel="noopener" data-track="footer"><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-i18n="book">Book on WhatsApp</span></a>
